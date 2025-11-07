@@ -4,8 +4,6 @@ A client-side React dashboard for exploring RENCI projects, including research g
 
 This app consumes locally-stored JSON exports (mirroring WordPress REST API schemas), normalizes them into an in-memory data graph, runs query functions, and produces enriched UI-ready summaries and tables — all without a backend.
 
----
-
 ## Core Concepts
 
 ### Data Graph Normalization
@@ -37,8 +35,6 @@ This keeps UI components small and testable.
 * Dropdown options  
 * Row generation
 
----
-
 ## Project Architecture
 
 ```
@@ -59,8 +55,6 @@ This separation allows the app to evolve into:
 * GraphQL mode
 
 …without rewriting UI.
-
----
 
 ## Directory Breakdown
 
@@ -97,15 +91,11 @@ Planned adapters and adapters entrypoint:
 * `src/api/index.js` — the adapter entrypoint (currently empty).
 * Future folders: `local/` and `remote/` for browser-persistent and remote REST adapters respectively (not implemented yet).
 
----
-
 ## How Data Flows
 
 `JSON → buildDataGraph() → Query Layer → useDashboardData → DashboardView → ProjectTable/SummaryPanel`
 
 UI never deals with raw data shape.
-
----
 
 ## Getting Started
 
@@ -136,8 +126,6 @@ npm run preview
 npm run lint
 npm run lint:fix
 ```
-
----
 
 ## Key Files
 
