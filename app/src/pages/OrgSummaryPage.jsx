@@ -4,12 +4,13 @@ export default function OrgSummaryPage() {
 
   return (
     <div style={{marginLeft: "1rem", marginRight: "1rem"}}>
-      <h2>RENCI-wide Projects View</h2>
       <div style={{marginBottom: "1.5rem"}}>
-        <button 
-          href="/dashboard"
-          style={{backgroundColor: "#00758D80", padding: "0.5rem", borderRadius: "0.25rem"}}
-        >View projects by research group</button>
+        <a href="/dashboard">
+          <button 
+            
+            style={{backgroundColor: "#00758D80", padding: "0.5rem", borderRadius: "0.25rem"}}
+          >View projects by research group</button>
+        </a>
       </div>
       <OrgSummaryView  />
     </div>

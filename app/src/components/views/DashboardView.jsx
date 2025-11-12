@@ -17,7 +17,7 @@ export default function DashboardView() {
   return (
     <div className="space-y-4">
       <header>
-        <h2 className="text-xl font-semibold">Project Dashboard</h2>
+        <h2 className="text-xl font-semibold">Projects by Research Group</h2>
       </header>
 
       <div>
