@@ -9,10 +9,10 @@ import SummaryPanel from "../elements/SummaryPanel";
 export default function DashboardView() {
   const [selectedResearchGroup, setSelectedResearchGroup] = useState("");
 
-  // rows for the currently selected research group
+  // Only build rows if a group is selected
   const rows = selectedResearchGroup
     ? getRowsForResearchGroup(Number(selectedResearchGroup))
-    : getRowsForResearchGroup(null); // null returns all projects
+    : [];
 
   return (
     <div className="space-y-4">
@@ -30,16 +30,26 @@ export default function DashboardView() {
           onChange={(e) => setSelectedResearchGroup(e.target.value)}
           className="border rounded px-2 py-1"
         >
-          <option value="">All Research Groups</option>
+          <option value="">Select a Research Group</option>
           {researchGroups.map((rg) => (
-            <option key={rg.id} value={rg.id} style={{fontSize: "1rem"}} >
-                {rg.title}
+            <option key={rg.id} value={rg.id} style={{ fontSize: "1rem" }}>
+              {rg.title}
             </option>
           ))}
         </select>
       </div>
-      <SummaryPanel rows={rows} />
-      <ProjectTable rows={rows} />
+
+      {/* ───────────────────────────────────────────── */}
+      {selectedResearchGroup ? (
+        <>
+          <SummaryPanel rows={rows} />
+          <ProjectTable rows={rows} />
+        </>
+      ) : (
+        <div style={{marginTop: "1rem", padding: "1rem", backgroundColor: "#f9f9f9", borderRadius: "0.25rem", border: "1px solid #ddd"}}>
+          Please select a research group to view data.
+        </div>
+      )}
     </div>
   );
 }
