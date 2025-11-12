@@ -4,27 +4,35 @@ export default function OrgSummary({ rows = [] }) {
   const projectCount = rows.length;
 
   // Aggregate staff
-  const allStaff = rows.flatMap(r => r.staffDetails);
-  const uniqueStaffCount = new Set(allStaff.map(s => s.name)).size;
+  const allStaff = rows.flatMap((r) => r.staffDetails);
+  const uniqueStaffCount = new Set(allStaff.map((s) => s.name)).size;
 
   // ──────────────────────────────────────────
-  // Funders
-  const allFunders = rows.flatMap(r => r.fundersWithCount);
+  // Funders — now storing { count, link }
+  const allFunders = rows.flatMap((r) => r.fundersWithCount);
   const funderMap = {};
-  allFunders.forEach(f => {
-    funderMap[f.name] = (funderMap[f.name] || 0) + f.count;
+  allFunders.forEach((f) => {
+    if (!f.name) return;
+    if (!funderMap[f.name]) {
+      funderMap[f.name] = { count: 0, link: f.link || null };
+    }
+    funderMap[f.name].count += f.count;
   });
 
-  // Partners
-  const allPartners = rows.flatMap(r => r.partnersWithCount);
+  // Partners — same logic
+  const allPartners = rows.flatMap((r) => r.partnersWithCount);
   const partnerMap = {};
-  allPartners.forEach(p => {
-    partnerMap[p.name] = (partnerMap[p.name] || 0) + p.count;
+  allPartners.forEach((p) => {
+    if (!p.name) return;
+    if (!partnerMap[p.name]) {
+      partnerMap[p.name] = { count: 0, link: p.link || null };
+    }
+    partnerMap[p.name].count += p.count;
   });
 
-  // Affiliation summary
+  // Affiliation summary (for later expansion)
   const affiliationMap = {};
-  allStaff.forEach(s => {
+  allStaff.forEach((s) => {
     const key = s.affiliation || "Unassigned";
     affiliationMap[key] = (affiliationMap[key] || 0) + 1;
   });
@@ -64,35 +72,54 @@ export default function OrgSummary({ rows = [] }) {
     fontWeight: "bold",
   };
 
+  const linkStyle = {
+    color: "#0073aa",
+    textDecoration: "none",
+  };
+
+  const linkHoverStyle = {
+    textDecoration: "underline",
+  };
+
   return (
     <div>
       <div style={containerStyle}>
         <div style={cardStyle}>
           <div>Total Active Projects</div>
-          <div style={{ fontWeight: "bold", fontSize: "1.4rem" }}>{projectCount}</div>
+          <div style={{ fontWeight: "bold", fontSize: "1.4rem" }}>
+            {projectCount}
+          </div>
         </div>
 
         <div style={cardStyle}>
           <div>Unique Staff Contributors</div>
-          <div style={{ fontWeight: "bold", fontSize: "1.4rem" }}>{uniqueStaffCount}</div>
+          <div style={{ fontWeight: "bold", fontSize: "1.4rem" }}>
+            {uniqueStaffCount}
+          </div>
         </div>
 
         <div style={cardStyle}>
           <div>Unique Funding Organizations</div>
-          <div style={{ fontWeight: "bold", fontSize: "1.4rem" }}>{Object.keys(funderMap).length}</div>
+          <div style={{ fontWeight: "bold", fontSize: "1.4rem" }}>
+            {Object.keys(funderMap).length}
+          </div>
         </div>
 
         <div style={cardStyle}>
           <div>Unique Partner Organizations</div>
-          <div style={{ fontWeight: "bold", fontSize: "1.4rem" }}>{Object.keys(partnerMap).length}</div>
+          <div style={{ fontWeight: "bold", fontSize: "1.4rem" }}>
+            {Object.keys(partnerMap).length}
+          </div>
         </div>
       </div>
 
-      {/* ── Funders Table ───────────────────────── */}
+      {/* ── Funders & Partners Tables ───────────────────────── */}
       <div style={{ display: "flex", gap: "32px", flexWrap: "wrap" }}>
         {Object.keys(funderMap).length > 0 && (
           <div style={cardStyle}>
-            <div style={{ marginBottom: "8px", fontWeight: "bold" }}>Funders Summary</div>
+            <div style={{ marginBottom: "8px", fontWeight: "bold" }}>
+              Funders Summary
+            </div>
             <table style={tableStyle}>
               <thead>
                 <tr>
@@ -101,9 +128,28 @@ export default function OrgSummary({ rows = [] }) {
                 </tr>
               </thead>
               <tbody>
-                {Object.entries(funderMap).map(([name, count]) => (
+                {Object.entries(funderMap).map(([name, { count, link }]) => (
                   <tr key={name}>
-                    <td style={thTdStyle}>{name}</td>
+                    <td style={thTdStyle}>
+                      {link ? (
+                        <a
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={linkStyle}
+                          onMouseEnter={(e) =>
+                            (e.target.style.textDecoration = "underline")
+                          }
+                          onMouseLeave={(e) =>
+                            (e.target.style.textDecoration = "none")
+                          }
+                        >
+                          {name}
+                        </a>
+                      ) : (
+                        name
+                      )}
+                    </td>
                     <td style={thTdStyle}>{count}</td>
                   </tr>
                 ))}
@@ -114,7 +160,9 @@ export default function OrgSummary({ rows = [] }) {
 
         {Object.keys(partnerMap).length > 0 && (
           <div style={cardStyle}>
-            <div style={{ marginBottom: "8px", fontWeight: "bold" }}>Partners Summary</div>
+            <div style={{ marginBottom: "8px", fontWeight: "bold" }}>
+              Partners Summary
+            </div>
             <table style={tableStyle}>
               <thead>
                 <tr>
@@ -123,9 +171,28 @@ export default function OrgSummary({ rows = [] }) {
                 </tr>
               </thead>
               <tbody>
-                {Object.entries(partnerMap).map(([name, count]) => (
+                {Object.entries(partnerMap).map(([name, { count, link }]) => (
                   <tr key={name}>
-                    <td style={thTdStyle}>{name}</td>
+                    <td style={thTdStyle}>
+                      {link ? (
+                        <a
+                          href={link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          style={linkStyle}
+                          onMouseEnter={(e) =>
+                            (e.target.style.textDecoration = "underline")
+                          }
+                          onMouseLeave={(e) =>
+                            (e.target.style.textDecoration = "none")
+                          }
+                        >
+                          {name}
+                        </a>
+                      ) : (
+                        name
+                      )}
+                    </td>
                     <td style={thTdStyle}>{count}</td>
                   </tr>
                 ))}

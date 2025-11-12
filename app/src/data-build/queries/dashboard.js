@@ -94,17 +94,28 @@ export function buildRowForProject(p, graph) {
 
   const fundersWithCount = Object.entries(funderCountMap)
     .map(([id, count]) => {
-      const name = orgMap[id]?.longName || orgMap[id]?.shortName || orgMap[id]?.title || null;
-      return name ? { name, count } : null;
+      const org = orgMap[id];
+      if (!org) return null;
+      return {
+        name: org.longName || org.shortName,
+        count,
+        link: org.link || org.website || null, // support multiple possible fields
+      };
     })
     .filter(Boolean);
 
   const partnersWithCount = Object.entries(partnerCountMap)
     .map(([id, count]) => {
-      const name = orgMap[id]?.longName || orgMap[id]?.shortName || orgMap[id]?.title || null;
-      return name ? { name, count } : null;
+      const org = orgMap[id];
+      if (!org) return null;
+      return {
+        name: org.longName || org.shortName,
+        count,
+        link: org.link || org.website || null,
+      };
     })
     .filter(Boolean);
+
 
   return {
     project: {

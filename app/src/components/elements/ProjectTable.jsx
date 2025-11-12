@@ -58,15 +58,39 @@ export default function ProjectTable({ rows = [] }) {
               <tr key={project.slug} style={tbodyTrStyle(index)}>
                 <td style={thTdStyle}>{project.title}</td>
                 <td style={thTdStyle}>{staffCount}</td>
-            <td style={thTdStyle}>
-                  {fundersWithCount.length > 0
-                    ? fundersWithCount.map(f => f.name).join(", ")
-                    : "—"}
+                <td style={thTdStyle}>
+                  {fundersWithCount.length > 0 ? (
+                    fundersWithCount.map((f, i) => (
+                      <div key={i}>
+                        {f.link ? (
+                          <a href={f.link} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                            {f.name}
+                          </a>
+                        ) : (
+                          f.name
+                        )}
+                      </div>
+                    ))
+                  ) : (
+                    "—"
+                  )}
                 </td>
                 <td style={thTdStyle}>
-                  {partnersWithCount.length > 0
-                    ? partnersWithCount.map(p => p.name).join(", ")
-                    : "—"}
+                  {partnersWithCount.length > 0 ? (
+                    partnersWithCount.map((p, i) => (
+                      <div key={i}>
+                        {p.link ? (
+                          <a href={p.link} target="_blank" rel="noopener noreferrer" style={linkStyle}>
+                            {p.name}
+                          </a>
+                        ) : (
+                          p.name
+                        )}
+                      </div>
+                    ))
+                  ) : (
+                    "—"
+                  )}
                 </td>
                 <td style={thTdStyle}>
                   <a
