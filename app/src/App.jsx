@@ -1,14 +1,14 @@
-import DashboardView from './components/views/DashboardView.jsx'
-import './index.css'
+import Router from "./router"
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 p-16" style={{ padding: "0 1.5rem 2rem"}}>
+    <div className="min-h-screen bg-gray-50 p-6">
       <header className="bg-white shadow p-2 mb-6">
-        <h1 className="text-2xl font-bold text-gray-800">RENCI Projects Dashboard</h1>
+        {/* nav links */}
       </header>
+
       <main>
-        <DashboardView />
+        <Router />
       </main>
     </div>
   )

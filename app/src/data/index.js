@@ -5,7 +5,10 @@ import rawResearch from "./research_groups/index.json";
 import rawOps from "./operations_groups/index.json";
 
 import { buildDataGraph } from "../data-build/buildDataGraph.js";
-import { getActiveProjectStatsForResearchGroup } from "../data-build/queries/dashboard.js";
+import {
+  getActiveProjectStatsForResearchGroup,
+  getAllActiveProjectStats
+} from "../data-build/queries/dashboard.js";
 
 // Build the data graph once
 export const graph = buildDataGraph({
@@ -24,5 +27,8 @@ export const operationsGroups = graph.operationsGroups;
 
 // Function to get project rows for a given research group
 export function getRowsForResearchGroup(researchGroupId) {
-  return getActiveProjectStatsForResearchGroup(researchGroupId, graph);
+  if (!researchGroupId) {
+    return getAllActiveProjectStats(graph);
+  }
+  return getActiveProjectStatsForResearchGroup(Number(researchGroupId), graph);
 }
