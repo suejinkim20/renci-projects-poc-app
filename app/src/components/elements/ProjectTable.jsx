@@ -40,6 +40,7 @@ export default function ProjectTable({ rows = [] }) {
             <th style={thStyle}>Project</th>
             <th style={thStyle}>Staff Count</th>
             <th style={thStyle}>Funders</th>
+            <th style={thStyle}>Partner Organizations</th>
             <th style={thStyle}>View Project Page</th>
           </tr>
         </thead>
@@ -49,21 +50,27 @@ export default function ProjectTable({ rows = [] }) {
               {
                 project,
                 staffCount,
-                funderNames,
-                partnerNames,
-                otherResearchGroups,
-                operationsGroups,
+                fundersWithCount,
+                partnersWithCount,
               },
               index
             ) => (
               <tr key={project.slug} style={tbodyTrStyle(index)}>
                 <td style={thTdStyle}>{project.title}</td>
                 <td style={thTdStyle}>{staffCount}</td>
-                <td style={thTdStyle}>{(funderNames.length > 0) ? funderNames.join(", ") : "—"}</td>
-
+            <td style={thTdStyle}>
+                  {fundersWithCount.length > 0
+                    ? fundersWithCount.map(f => f.name).join(", ")
+                    : "—"}
+                </td>
+                <td style={thTdStyle}>
+                  {partnersWithCount.length > 0
+                    ? partnersWithCount.map(p => p.name).join(", ")
+                    : "—"}
+                </td>
                 <td style={thTdStyle}>
                   <a
-                    href={project.wpUrl}
+                    href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     style={linkStyle}
