@@ -90,7 +90,7 @@ export default function SummaryPanel({ rows = [] }) {
       </div>
 
       {/* ── Affiliation breakdown ─────────────── */}
-      {Object.keys(affiliationMap).length > 0 && (
+      {/* {Object.keys(affiliationMap).length > 0 && (
         <div style={cardStyle}>
           <div style={labelStyle}>
             Staff by Affiliation ({Object.keys(affiliationMap).length}):
@@ -103,7 +103,7 @@ export default function SummaryPanel({ rows = [] }) {
             ))}
           </ul>
         </div>
-      )}
+      )} */}
 
       {/* ── Funders breakdown ──────────────────── */}
       {Object.keys(funderMap).length > 0 && (

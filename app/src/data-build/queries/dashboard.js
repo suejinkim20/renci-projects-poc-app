@@ -1,4 +1,136 @@
+// src/data-build/queries/dashboard.js
 import { shallowMemoize } from "../utils/memoize.js";
+
+/**
+ * Single-source row builder for a project.
+ * Returns the UI-ready row shape used by ProjectTable and SummaryPanel.
+ *
+ * Row shape:
+ * {
+ *   project: { title, slug, link },
+ *   staffCount: Number,
+ *   staffDetails: [{ name, researchGroupName, operationsGroupNames, affiliation }],
+ *   otherResearchGroupNames: [String],
+ *   operationsGroups: [String],
+ *   fundersWithCount: [{ name, count }],
+ *   partnersWithCount: [{ name, count }]
+ * }
+ */
+export function buildRowForProject(p, graph) {
+  const orgMap = graph._maps?.orgsById || {};
+  const staffMap = graph._maps?.staffById || {};
+  const researchMap = graph._maps?.researchById || {};
+  const opsMap = graph._maps?.opsById || {};
+
+  const staffIds = p.staffIds || [];
+
+  // Build staffDetails: keep researchGroupName and operationsGroupNames separate.
+  // Also compute `affiliation` = researchGroupName || first non-management ops name || ""
+  const staffDetails = staffIds
+    .map((sid) => {
+      const s = staffMap[sid];
+      if (!s) return null;
+
+      // name fallbacks (different normalizations might use different fields)
+      const name = s.displayName || s.title || s.name || s.acf?.display_name || "";
+
+      const researchGroupName = s.researchGroupId ? researchMap[s.researchGroupId]?.title || null : null;
+
+      // exclude management ops group id 6601
+      const operationsGroupNames = (s.operationsGroupIds || [])
+        .filter((ogId) => Number(ogId) !== 6601)
+        .map((ogId) => opsMap[ogId]?.title)
+        .filter(Boolean);
+
+      // primary affiliation: prefer research group, else first non-management ops group name, else blank
+      const affiliation = researchGroupName || (operationsGroupNames[0] || "");
+
+      return {
+        id: sid,
+        name,
+        researchGroupName,
+        operationsGroupNames,
+        affiliation,
+      };
+    })
+    .filter(Boolean);
+
+  // Other research groups (represented by staff on this project) excluding any that match project's own research groups.
+  // We want names, deduped.
+  const projectResearchGroupIds = new Set((p.researchGroupIds || []).map((id) => Number(id)));
+  const otherResearchGroupIds = new Set();
+  for (const sd of staffDetails) {
+    if (sd.researchGroupName) {
+      // find the research id by matching title -> id (reverse lookup using researchMap)
+      // but we can also check staff's researchGroupId if present in staffMap (safer)
+      const s = staffMap[sd.id];
+      const rgId = s?.researchGroupId ? Number(s.researchGroupId) : null;
+      if (rgId && !projectResearchGroupIds.has(rgId)) otherResearchGroupIds.add(rgId);
+    }
+  }
+  const otherResearchGroupNames = Array.from(otherResearchGroupIds)
+    .map((id) => researchMap[id]?.title)
+    .filter(Boolean);
+
+  // Operations groups represented across staff (deduped), excluding management id 6601
+  const opsIds = new Set();
+  for (const sd of staffDetails) {
+    (sd.operationsGroupNames || []).forEach((name) => {
+      // opsMap values are names; we have them already. We'll collect names directly.
+      opsIds.add(name);
+    });
+  }
+  const operationsGroups = Array.from(opsIds);
+
+  // Funder & partner counts per project (these are counts at project-level; for summary aggregation we'll sum across rows)
+  const funderCountMap = {};
+  (p.fundingOrgIds || []).forEach((id) => {
+    funderCountMap[id] = (funderCountMap[id] || 0) + 1;
+  });
+  const partnerCountMap = {};
+  (p.partnerOrgIds || []).forEach((id) => {
+    partnerCountMap[id] = (partnerCountMap[id] || 0) + 1;
+  });
+
+  const fundersWithCount = Object.entries(funderCountMap)
+    .map(([id, count]) => {
+      const org = orgMap[id];
+      if (!org) return null;
+      return {
+        name: org.longName || org.shortName,
+        count,
+        link: org.link || org.website || null, // support multiple possible fields
+      };
+    })
+    .filter(Boolean);
+
+  const partnersWithCount = Object.entries(partnerCountMap)
+    .map(([id, count]) => {
+      const org = orgMap[id];
+      if (!org) return null;
+      return {
+        name: org.longName || org.shortName,
+        count,
+        link: org.link || org.website || null,
+      };
+    })
+    .filter(Boolean);
+
+
+  return {
+    project: {
+      title: (p.title && (p.title.rendered || p.title)) || p.name || "",
+      slug: p.slug || (p.title && p.title.rendered ? String(p.title.rendered).toLowerCase().replace(/\s+/g, "-") : ""),
+      link: p.link || p.url || "",
+    },
+    staffCount: staffIds.length,
+    staffDetails,
+    otherResearchGroupNames,
+    operationsGroups,
+    fundersWithCount,
+    partnersWithCount,
+  };
+}
 
 /**
  * Returns project objects (normalized) that are active and reference a research group id.
@@ -6,110 +138,37 @@ import { shallowMemoize } from "../utils/memoize.js";
  */
 export const getActiveProjectsByResearchGroup = shallowMemoize((groupId, graph) => {
   if (!groupId) return [];
-  return (graph.projects || []).filter(p => {
-    return p.active && (p.researchGroupIds || []).includes(Number(groupId));
+  return (graph.projects || []).filter((p) => {
+    return p.active && (p.researchGroupIds || []).map(Number).includes(Number(groupId));
   });
 });
 
 /**
- * Returns enriched rows for the ProjectTable and SummaryPanel:
- * Each row contains:
- * - project (object)
- * - staffCount
- * - fundersWithCount [{name, count}]
- * - partnersWithCount [{name, count}]
- * - otherResearchGroupNames (excluding selected group)
- * - operationsGroupNames
- * - staffDetails [{name, researchGroupName, operationsGroupNames}]
+ * Returns enriched rows for the ProjectTable and SummaryPanel for a given research group.
+ * Delegates to buildRowForProject for row shape.
  */
 export const getActiveProjectStatsForResearchGroup = shallowMemoize((groupId, graph) => {
   const projects = (graph.projects || []).filter(
-    p => p.active && (p.researchGroupIds || []).includes(Number(groupId))
+    (p) => p.active && (p.researchGroupIds || []).map(Number).includes(Number(groupId))
   );
 
-  const orgMap = graph._maps.orgsById || {};
-  const staffMap = graph._maps.staffById || {};
-  const researchMap = graph._maps.researchById || {};
-  const opsMap = graph._maps.opsById || {};
-
-  return projects.map(p => {
-    const staffIds = p.staffIds || [];
-
-    // Staff details
-const staffDetails = staffIds.map(sid => {
-  const s = staffMap[sid];
-  if (!s) return null;
-
-  // research group name (null if none)
-  const researchGroupName = s.researchGroupId ? researchMap[s.researchGroupId]?.title : null;
-
-  // operations groups excluding 6601 (management team)
-  const operationsGroupNames = (s.operationsGroupIds || [])
-    .filter(ogId => Number(ogId) !== 6601) // exclude management
-    .map(ogId => opsMap[ogId]?.title)
-    .filter(Boolean);
-
-    return {
-      name: s.name,
-      researchGroupName,
-      operationsGroupNames
-    };
-  }).filter(Boolean);
-
-
-    // Other research groups (excluding selected)
-    const otherResearchGroupIds = new Set(
-      staffDetails
-        .map(s => s.researchGroupName)
-        .filter(rg => rg && rg !== researchMap[groupId]?.title)
-    );
-
-    // Operations groups
-    const operationsGroups = Array.from(new Set(staffDetails.flatMap(s => s.operationsGroupNames)));
-
-    // Funder and partner counts
-    const funderCountMap = {};
-    (p.fundingOrgIds || []).forEach(id => {
-      funderCountMap[id] = (funderCountMap[id] || 0) + 1;
-    });
-    const partnerCountMap = {};
-    (p.partnerOrgIds || []).forEach(id => {
-      partnerCountMap[id] = (partnerCountMap[id] || 0) + 1;
-    });
-
-    const fundersWithCount = Object.entries(funderCountMap)
-      .map(([id, count]) => ({ name: orgMap[id]?.longName || orgMap[id]?.shortName, count }))
-      .filter(Boolean);
-
-    const partnersWithCount = Object.entries(partnerCountMap)
-      .map(([id, count]) => ({ name: orgMap[id]?.longName || orgMap[id]?.shortName, count }))
-      .filter(Boolean);
-
-    return {
-      project: {
-        title: p.title,
-        slug: p.slug,
-        link: p.link
-      },
-      staffCount: staffIds.length,
-      staffDetails,
-      otherResearchGroupNames: Array.from(otherResearchGroupIds),
-      operationsGroups,
-      fundersWithCount,
-      partnersWithCount
-    };
-  });
+  return projects.map((p) => buildRowForProject(p, graph));
 });
-
 
 /**
- * Returns unique funder organizations (objects) across active projects for a research group.
+ * Returns enriched rows for ALL active projects (org-wide).
  */
-export const getUniqueFundingOrganizationsForResearchGroup = shallowMemoize((groupId, graph) => {
-  const projects = getActiveProjectsByResearchGroup(groupId, graph);
-  const orgIds = new Set();
-  for (const p of projects) {
-    (p.fundingOrgIds || []).forEach(id => orgIds.add(id));
-  }
-  return Array.from(orgIds).map(id => graph._maps.orgsById[id]).filter(Boolean);
+export const getAllActiveProjectStats = shallowMemoize((graph) => {
+  const projects = (graph.projects || []).filter((p) => p.active);
+  return projects.map((p) => buildRowForProject(p, graph));
 });
+
+/**
+ * Convenience export names (optional) - ensure your index/data file imports the correct names.
+ */
+export default {
+  buildRowForProject,
+  getActiveProjectsByResearchGroup,
+  getActiveProjectStatsForResearchGroup,
+  getAllActiveProjectStats,
+};
