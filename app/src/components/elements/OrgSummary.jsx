@@ -1,40 +1,99 @@
+import { useMemo } from "react";
+import {
+  useReactTable,
+  getCoreRowModel,
+  getSortedRowModel,
+  flexRender,
+} from "@tanstack/react-table";
+
 export default function OrgSummary({ rows = [] }) {
   if (!rows.length) return <p>No projects found.</p>;
 
   const projectCount = rows.length;
 
-  // Aggregate staff
-  const allStaff = rows.flatMap((r) => r.staffDetails);
+  // ──────────────────────────────────────────
+  // Aggregate data
+  const allStaff = rows.flatMap((r) => r.staffDetails || []);
   const uniqueStaffCount = new Set(allStaff.map((s) => s.name)).size;
 
-  // ──────────────────────────────────────────
-  // Funders — now storing { count, link }
-  const allFunders = rows.flatMap((r) => r.fundersWithCount);
+  const allFunders = rows.flatMap((r) => r.fundersWithCount || []);
   const funderMap = {};
   allFunders.forEach((f) => {
     if (!f.name) return;
-    if (!funderMap[f.name]) {
-      funderMap[f.name] = { count: 0, link: f.link || null };
-    }
+    funderMap[f.name] = funderMap[f.name] || { count: 0, url: f.url || null };
     funderMap[f.name].count += f.count;
   });
 
-  // Partners — same logic
-  const allPartners = rows.flatMap((r) => r.partnersWithCount);
+  const allPartners = rows.flatMap((r) => r.partnersWithCount || []);
   const partnerMap = {};
   allPartners.forEach((p) => {
     if (!p.name) return;
-    if (!partnerMap[p.name]) {
-      partnerMap[p.name] = { count: 0, link: p.link || null };
-    }
+    partnerMap[p.name] = partnerMap[p.name] || { count: 0, url: p.url || null };
     partnerMap[p.name].count += p.count;
   });
 
-  // Affiliation summary (for later expansion)
+  // Affiliation summary (optional future use)
   const affiliationMap = {};
   allStaff.forEach((s) => {
     const key = s.affiliation || "Unassigned";
     affiliationMap[key] = (affiliationMap[key] || 0) + 1;
+  });
+
+  // ──────────────────────────────────────────
+  // Prepare TanStack table data
+  const funderData = Object.entries(funderMap).map(([name, obj]) => ({
+    name,
+    count: obj.count,
+    url: obj.url || null,
+  }));
+
+  const partnerData = Object.entries(partnerMap).map(([name, obj]) => ({
+    name,
+    count: obj.count,
+    url: obj.url || null,
+  }));
+
+  const columns = useMemo(
+    () => [
+      {
+        header: "Name",
+        accessorKey: "name",
+        cell: ({ row }) => {
+          const { name, url } = row.original;
+          return url ? (
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ color: "#0366d6", textDecoration: "underline" }}
+            >
+              {name}
+            </a>
+          ) : (
+            name
+          );
+        },
+      },
+      {
+        header: "Project Count",
+        accessorKey: "count",
+      },
+    ],
+    []
+  );
+
+  const funderTable = useReactTable({
+    data: funderData,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
+  });
+
+  const partnerTable = useReactTable({
+    data: partnerData,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
   });
 
   // ──────────────────────────────────────────
@@ -70,19 +129,48 @@ export default function OrgSummary({ rows = [] }) {
     ...thTdStyle,
     backgroundColor: "#f4f4f4",
     fontWeight: "bold",
+    cursor: "pointer",
   };
 
-  const linkStyle = {
-    color: "#0073aa",
-    textDecoration: "none",
-  };
+  const renderTable = (tableInstance) => (
+    <table style={tableStyle}>
+      <thead>
+        {tableInstance.getHeaderGroups().map((headerGroup) => (
+          <tr key={headerGroup.id}>
+            {headerGroup.headers.map((header) => (
+              <th
+                key={header.id}
+                style={thStyle}
+                onClick={header.column.getToggleSortingHandler()}
+              >
+                {flexRender(header.column.columnDef.header, header.getContext())}
+                {{
+                  asc: " ▲",
+                  desc: " ▼",
+                }[header.column.getIsSorted()] ?? null}
+              </th>
+            ))}
+          </tr>
+        ))}
+      </thead>
+      <tbody>
+        {tableInstance.getRowModel().rows.map((row) => (
+          <tr key={row.id}>
+            {row.getVisibleCells().map((cell) => (
+              <td key={cell.id} style={thTdStyle}>
+                {flexRender(cell.column.columnDef.cell, cell.getContext())}
+              </td>
+            ))}
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  );
 
-  const linkHoverStyle = {
-    textDecoration: "underline",
-  };
-
+  // ──────────────────────────────────────────
   return (
     <div>
+      {/* Summary cards */}
       <div style={containerStyle}>
         <div style={cardStyle}>
           <div>Total Active Projects</div>
@@ -113,91 +201,27 @@ export default function OrgSummary({ rows = [] }) {
         </div>
       </div>
 
-      {/* ── Funders & Partners Tables ───────────────────────── */}
+      {/* Tables */}
       <div style={{ display: "flex", gap: "32px", flexWrap: "wrap" }}>
-        {Object.keys(funderMap).length > 0 && (
+        {funderData.length > 0 && (
           <div style={cardStyle}>
-            <div style={{ marginBottom: "8px", fontWeight: "bold" }}>
+            <div
+              style={{ marginBottom: "8px", fontWeight: "bold", fontSize: "1.1rem" }}
+            >
               Funders Summary
             </div>
-            <table style={tableStyle}>
-              <thead>
-                <tr>
-                  <th style={thStyle}>Name</th>
-                  <th style={thStyle}>Project Count</th>
-                </tr>
-              </thead>
-              <tbody>
-                {Object.entries(funderMap).map(([name, { count, link }]) => (
-                  <tr key={name}>
-                    <td style={thTdStyle}>
-                      {link ? (
-                        <a
-                          href={link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={linkStyle}
-                          onMouseEnter={(e) =>
-                            (e.target.style.textDecoration = "underline")
-                          }
-                          onMouseLeave={(e) =>
-                            (e.target.style.textDecoration = "none")
-                          }
-                        >
-                          {name}
-                        </a>
-                      ) : (
-                        name
-                      )}
-                    </td>
-                    <td style={thTdStyle}>{count}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            {renderTable(funderTable)}
           </div>
         )}
 
-        {Object.keys(partnerMap).length > 0 && (
+        {partnerData.length > 0 && (
           <div style={cardStyle}>
-            <div style={{ marginBottom: "8px", fontWeight: "bold" }}>
+            <div
+              style={{ marginBottom: "8px", fontWeight: "bold", fontSize: "1.1rem" }}
+            >
               Partners Summary
             </div>
-            <table style={tableStyle}>
-              <thead>
-                <tr>
-                  <th style={thStyle}>Name</th>
-                  <th style={thStyle}>Project Count</th>
-                </tr>
-              </thead>
-              <tbody>
-                {Object.entries(partnerMap).map(([name, { count, link }]) => (
-                  <tr key={name}>
-                    <td style={thTdStyle}>
-                      {link ? (
-                        <a
-                          href={link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          style={linkStyle}
-                          onMouseEnter={(e) =>
-                            (e.target.style.textDecoration = "underline")
-                          }
-                          onMouseLeave={(e) =>
-                            (e.target.style.textDecoration = "none")
-                          }
-                        >
-                          {name}
-                        </a>
-                      ) : (
-                        name
-                      )}
-                    </td>
-                    <td style={thTdStyle}>{count}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+            {renderTable(partnerTable)}
           </div>
         )}
       </div>

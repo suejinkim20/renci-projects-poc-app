@@ -1,110 +1,147 @@
+import React, { useMemo } from "react";
+import {
+  useReactTable,
+  getCoreRowModel,
+  getSortedRowModel,
+  flexRender,
+} from "@tanstack/react-table";
+
 export default function ProjectTable({ rows = [] }) {
+  if (!rows.length) return <p>No projects available.</p>;
+
+  const columns = useMemo(
+    () => [
+      {
+        header: "Project",
+        accessorKey: "title",
+      },
+      {
+        header: "Funders",
+        accessorKey: "fundersWithCount",
+        cell: ({ row }) => {
+          const funders = row.original.fundersWithCount || [];
+          if (!funders.length) return "—";
+          return (
+            <ul style={{ margin: 0, paddingLeft: "16px" }}>
+              {funders.map((f) => (
+                <li key={f.name}>
+                  {f.url ? (
+                    <a
+                      href={f.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#2563eb", textDecoration: "none" }}
+                    >
+                      {f.name}
+                    </a>
+                  ) : (
+                    f.name
+                  )}
+                </li>
+              ))}
+            </ul>
+          );
+        },
+      },
+      {
+        header: "Partners",
+        accessorKey: "partnersWithCount",
+        cell: ({ row }) => {
+          const partners = row.original.partnersWithCount || [];
+          if (!partners.length) return "—";
+          return (
+            <ul style={{ margin: 0, paddingLeft: "16px" }}>
+              {partners.map((p) => (
+                <li key={p.name}>
+                  {p.url ? (
+                    <a
+                      href={p.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#2563eb", textDecoration: "none" }}
+                    >
+                      {p.name}
+                    </a>
+                  ) : (
+                    p.name
+                  )}
+                </li>
+              ))}
+            </ul>
+          );
+        },
+      },
+      {
+        header: "Staff",
+        accessorKey: "staffDetails",
+        cell: ({ row }) => {
+          const staff = row.original.staffDetails || [];
+          if (!staff.length) return "—";
+          return (
+            <ul style={{ margin: 0, paddingLeft: "16px" }}>
+              {staff.map((s) => (
+                <li key={s.name}>
+                  {s.name}
+                  {s.affiliation ? ` (${s.affiliation})` : ""}
+                </li>
+              ))}
+            </ul>
+          );
+        },
+      },
+    ],
+    []
+  );
+
+  const table = useReactTable({
+    data: rows,
+    columns,
+    getCoreRowModel: getCoreRowModel(),
+  });
+
   const tableStyle = {
     width: "100%",
     borderCollapse: "collapse",
-    tableLayout: "fixed", // ensures consistent column widths
-    wordWrap: "break-word", // wrap long text
+    marginTop: "16px",
   };
 
   const thTdStyle = {
     border: "1px solid #ddd",
-    padding: "8px",
+    padding: "8px 10px",
     textAlign: "left",
     verticalAlign: "top",
   };
 
   const thStyle = {
     ...thTdStyle,
-    backgroundColor: "#f4f4f4",
+    backgroundColor: "#f9f9f9",
     fontWeight: "bold",
   };
-
-  const linkStyle = {
-    color: "#1a73e8",
-    textDecoration: "none",
-  };
-
-  const tbodyTrStyle = (index) => ({
-    backgroundColor: index % 2 === 0 ? "#ffffff" : "#f9f9f9",
-  });
-
-  if (!rows.length) {
-    return <p>No projects found for the selected research group.</p>;
-  }
 
   return (
     <div style={{ overflowX: "auto" }}>
       <table style={tableStyle}>
         <thead>
-          <tr>
-            <th style={thStyle}>Project</th>
-            <th style={thStyle}>Staff Count</th>
-            <th style={thStyle}>Funders</th>
-            <th style={thStyle}>Partner Organizations</th>
-            <th style={thStyle}>View Project Page</th>
-          </tr>
+          {table.getHeaderGroups().map((headerGroup) => (
+            <tr key={headerGroup.id}>
+              {headerGroup.headers.map((header) => (
+                <th key={header.id} style={thStyle}>
+                  {flexRender(header.column.columnDef.header, header.getContext())}
+                </th>
+              ))}
+            </tr>
+          ))}
         </thead>
         <tbody>
-          {rows.map(
-            (
-              {
-                project,
-                staffCount,
-                fundersWithCount,
-                partnersWithCount,
-              },
-              index
-            ) => (
-              <tr key={project.slug} style={tbodyTrStyle(index)}>
-                <td style={thTdStyle}>{project.title}</td>
-                <td style={thTdStyle}>{staffCount}</td>
-                <td style={thTdStyle}>
-                  {fundersWithCount.length > 0 ? (
-                    fundersWithCount.map((f, i) => (
-                      <div key={i}>
-                        {f.link ? (
-                          <a href={f.link} target="_blank" rel="noopener noreferrer" style={linkStyle}>
-                            {f.name}
-                          </a>
-                        ) : (
-                          f.name
-                        )}
-                      </div>
-                    ))
-                  ) : (
-                    "—"
-                  )}
+          {table.getRowModel().rows.map((row) => (
+            <tr key={row.id}>
+              {row.getVisibleCells().map((cell) => (
+                <td key={cell.id} style={thTdStyle}>
+                  {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
-                <td style={thTdStyle}>
-                  {partnersWithCount.length > 0 ? (
-                    partnersWithCount.map((p, i) => (
-                      <div key={i}>
-                        {p.link ? (
-                          <a href={p.link} target="_blank" rel="noopener noreferrer" style={linkStyle}>
-                            {p.name}
-                          </a>
-                        ) : (
-                          p.name
-                        )}
-                      </div>
-                    ))
-                  ) : (
-                    "—"
-                  )}
-                </td>
-                <td style={thTdStyle}>
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    style={linkStyle}
-                  >
-                    View
-                  </a>
-                </td>
-              </tr>
-            )
-          )}
+              ))}
+            </tr>
+          ))}
         </tbody>
       </table>
     </div>

@@ -99,7 +99,7 @@ export function buildRowForProject(p, graph) {
       return {
         name: org.longName || org.shortName,
         count,
-        link: org.link || org.website || null, // support multiple possible fields
+        url: org.link || org.website || org.url || null, // support multiple possible fields
       };
     })
     .filter(Boolean);
@@ -111,22 +111,15 @@ export function buildRowForProject(p, graph) {
       return {
         name: org.longName || org.shortName,
         count,
-        link: org.link || org.website || null,
+        url: org.link || org.website || org.url || null,
       };
     })
     .filter(Boolean);
 
-
   return {
-    project: {
-      title: (p.title && (p.title.rendered || p.title)) || p.name || "",
-      slug: p.slug || (p.title && p.title.rendered ? String(p.title.rendered).toLowerCase().replace(/\s+/g, "-") : ""),
-      link: p.link || p.url || "",
-    },
-    staffCount: staffIds.length,
+    id: p.id,
+    title: (p.title && (p.title.rendered || p.title)) || p.name || "",
     staffDetails,
-    otherResearchGroupNames,
-    operationsGroups,
     fundersWithCount,
     partnersWithCount,
   };
@@ -147,13 +140,14 @@ export const getActiveProjectsByResearchGroup = shallowMemoize((groupId, graph) 
  * Returns enriched rows for the ProjectTable and SummaryPanel for a given research group.
  * Delegates to buildRowForProject for row shape.
  */
-export const getActiveProjectStatsForResearchGroup = shallowMemoize((groupId, graph) => {
-  const projects = (graph.projects || []).filter(
-    (p) => p.active && (p.researchGroupIds || []).map(Number).includes(Number(groupId))
-  );
+export function getActiveProjectStatsForResearchGroup(researchGroupId, graph) {
+  const projects = graph.projects.filter((p) => {
+    return p.active && (researchGroupId ? (p.researchGroupIds || []).map(Number).includes(Number(researchGroupId)) : true);
+  });
 
   return projects.map((p) => buildRowForProject(p, graph));
-});
+}
+
 
 /**
  * Returns enriched rows for ALL active projects (org-wide).
