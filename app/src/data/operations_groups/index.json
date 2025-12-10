@@ -1,866 +1,1736 @@
-[
-  {
-    "id": 6607,
-    "date": "2025-09-18T13:34:46",
-    "date_gmt": "2025-09-18T17:34:46",
-    "guid": {
-      "rendered": "https://renci.org/?post_type=operations-group&#038;p=6607"
-    },
-    "modified": "2025-10-29T09:45:06",
-    "modified_gmt": "2025-10-29T13:45:06",
-    "slug": "research-project-management",
-    "status": "publish",
-    "type": "operations-group",
-    "link": "https://renci.org/operations/research-project-management/",
-    "title": {
-      "rendered": "Research Project Management"
-    },
-    "excerpt": {
-      "rendered": "\u003Cp\u003EThe Research Project Management Group provides the structure and oversight needed to guide projects from concept to completion. They coordinate timelines, budgets, resources, and communications to ensure that goals are met efficiently and deliverables meet high standards. This team works closely with researchers, technical staff, and external partners to define objectives, identify risks, and track progress, offering tools and strategies that keep complex initiatives on schedule and within scope. By balancing big-picture planning with day-to-day details, the Project Management Group enables smooth and successful execution of RENCI projects.\u003C/p\u003E\n",
-      "protected": false
-    },
-    "author": 120470,
-    "featured_media": 6485,
-    "template": "",
-    "meta": {
-      "_acf_changed": false,
-      "_relevanssi_hide_post": "",
-      "_relevanssi_hide_content": "",
-      "_relevanssi_pin_for_all": "",
-      "_relevanssi_pin_keywords": "",
-      "_relevanssi_unpin_keywords": "",
-      "_relevanssi_related_keywords": "",
-      "_relevanssi_related_include_ids": "",
-      "_relevanssi_related_exclude_ids": "",
-      "_relevanssi_related_no_append": "",
-      "_relevanssi_related_not_related": "",
-      "_relevanssi_related_posts": "",
-      "_relevanssi_noindex_reason": "",
-      "_EventAllDay": false,
-      "_EventTimezone": "",
-      "_EventStartDate": "",
-      "_EventEndDate": "",
-      "_EventStartDateUTC": "",
-      "_EventEndDateUTC": "",
-      "_EventShowMap": false,
-      "_EventShowMapLink": false,
-      "_EventURL": "",
-      "_EventCost": "",
-      "_EventCostDescription": "",
-      "_EventCurrencySymbol": "",
-      "_EventCurrencyCode": "",
-      "_EventCurrencyPosition": "",
-      "_EventDateTimeSeparator": "",
-      "_EventTimeRangeSeparator": "",
-      "_EventOrganizerID": [],
-      "_EventVenueID": [],
-      "_OrganizerEmail": "",
-      "_OrganizerPhone": "",
-      "_OrganizerWebsite": "",
-      "_VenueAddress": "",
-      "_VenueCity": "",
-      "_VenueCountry": "",
-      "_VenueProvince": "",
-      "_VenueState": "",
-      "_VenueZip": "",
-      "_VenuePhone": "",
-      "_VenueURL": "",
-      "_VenueStateProvince": "",
-      "_VenueLat": "",
-      "_VenueLng": "",
-      "_VenueShowMap": false,
-      "_VenueShowMapLink": false
-    },
-    "class_list": [
-      "post-6607",
-      "operations-group",
-      "type-operations-group",
-      "status-publish",
-      "has-post-thumbnail",
-      "hentry"
-    ],
-    "acf": [],
-    "mb": [],
-    "mfb_rest_fields": [
-      "title"
-    ],
-    "_links": {
-      "self": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6607",
-          "targetHints": {
-            "allow": [
-              "GET"
-            ]
+{
+  "updated": "2025-12-10T18:47:58.225Z",
+  "items": [
+    {
+      "id": 6607,
+      "date": "2025-09-18T13:34:46",
+      "date_gmt": "2025-09-18T17:34:46",
+      "guid": {
+        "rendered": "https://renci.org/?post_type=operations-group&#038;p=6607"
+      },
+      "modified": "2025-10-29T09:45:06",
+      "modified_gmt": "2025-10-29T13:45:06",
+      "slug": "research-project-management",
+      "status": "publish",
+      "type": "operations-group",
+      "link": "https://renci.org/operations/research-project-management/",
+      "title": {
+        "rendered": "Research Project Management"
+      },
+      "excerpt": {
+        "rendered": "<p>The Research Project Management Group provides the structure and oversight needed to guide projects from concept to completion. They coordinate timelines, budgets, resources, and communications to ensure that goals are met efficiently and deliverables meet high standards. This team works closely with researchers, technical staff, and external partners to define objectives, identify risks, and track progress, offering tools and strategies that keep complex initiatives on schedule and within scope. By balancing big-picture planning with day-to-day details, the Project Management Group enables smooth and successful execution of RENCI projects.</p>\n",
+        "protected": false
+      },
+      "author": 120470,
+      "featured_media": 6485,
+      "template": "",
+      "meta": {
+        "_acf_changed": false,
+        "_relevanssi_hide_post": "",
+        "_relevanssi_hide_content": "",
+        "_relevanssi_pin_for_all": "",
+        "_relevanssi_pin_keywords": "",
+        "_relevanssi_unpin_keywords": "",
+        "_relevanssi_related_keywords": "",
+        "_relevanssi_related_include_ids": "",
+        "_relevanssi_related_exclude_ids": "",
+        "_relevanssi_related_no_append": "",
+        "_relevanssi_related_not_related": "",
+        "_relevanssi_related_posts": "",
+        "_relevanssi_noindex_reason": "",
+        "_EventAllDay": false,
+        "_EventTimezone": "",
+        "_EventStartDate": "",
+        "_EventEndDate": "",
+        "_EventStartDateUTC": "",
+        "_EventEndDateUTC": "",
+        "_EventShowMap": false,
+        "_EventShowMapLink": false,
+        "_EventURL": "",
+        "_EventCost": "",
+        "_EventCostDescription": "",
+        "_EventCurrencySymbol": "",
+        "_EventCurrencyCode": "",
+        "_EventCurrencyPosition": "",
+        "_EventDateTimeSeparator": "",
+        "_EventTimeRangeSeparator": "",
+        "_EventOrganizerID": [],
+        "_EventVenueID": [],
+        "_OrganizerEmail": "",
+        "_OrganizerPhone": "",
+        "_OrganizerWebsite": "",
+        "_VenueAddress": "",
+        "_VenueCity": "",
+        "_VenueCountry": "",
+        "_VenueProvince": "",
+        "_VenueState": "",
+        "_VenueZip": "",
+        "_VenuePhone": "",
+        "_VenueURL": "",
+        "_VenueStateProvince": "",
+        "_VenueLat": "",
+        "_VenueLng": "",
+        "_VenueShowMap": false,
+        "_VenueShowMapLink": false,
+        "_tribe_blocks_recurrence_rules": "",
+        "_tribe_blocks_recurrence_description": "",
+        "_tribe_blocks_recurrence_exclusions": ""
+      },
+      "class_list": [
+        "post-6607",
+        "operations-group",
+        "type-operations-group",
+        "status-publish",
+        "has-post-thumbnail",
+        "hentry"
+      ],
+      "acf": [],
+      "mb": [],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Research Project Management - RENCI</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://renci.org/operations/research-project-management/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Research Project Management - RENCI\" />\n<meta property=\"og:description\" content=\"The Research Project Management Group provides the structure and oversight needed to guide projects from concept to completion. They coordinate timelines, budgets, resources, and communications to ensure that goals are met efficiently and deliverables meet high standards. This team works closely with researchers, technical staff, and external partners to define objectives, identify risks, and track progress, offering tools and strategies that keep complex initiatives on schedule and within scope. By balancing big-picture planning with day-to-day details, the Project Management Group enables smooth and successful execution of RENCI projects.\" />\n<meta property=\"og:url\" content=\"https://renci.org/operations/research-project-management/\" />\n<meta property=\"og:site_name\" content=\"RENCI\" />\n<meta property=\"article:publisher\" content=\"https://www.facebook.com/renci.org/\" />\n<meta property=\"article:modified_time\" content=\"2025-10-29T13:45:06+00:00\" />\n<meta property=\"og:image\" content=\"https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_451399234-scaled.jpeg\" />\n\t<meta property=\"og:image:width\" content=\"2560\" />\n\t<meta property=\"og:image:height\" content=\"1280\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:site\" content=\"@renci\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://renci.org/operations/research-project-management/\",\"url\":\"https://renci.org/operations/research-project-management/\",\"name\":\"Research Project Management - RENCI\",\"isPartOf\":{\"@id\":\"https://renci.org/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://renci.org/operations/research-project-management/#primaryimage\"},\"image\":{\"@id\":\"https://renci.org/operations/research-project-management/#primaryimage\"},\"thumbnailUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_451399234-scaled.jpeg\",\"datePublished\":\"2025-09-18T17:34:46+00:00\",\"dateModified\":\"2025-10-29T13:45:06+00:00\",\"breadcrumb\":{\"@id\":\"https://renci.org/operations/research-project-management/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://renci.org/operations/research-project-management/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/operations/research-project-management/#primaryimage\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_451399234-scaled.jpeg\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_451399234-scaled.jpeg\",\"width\":2560,\"height\":1280,\"caption\":\"Project management business technology concept on vr screen.\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://renci.org/operations/research-project-management/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://renci.org/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Research Project Management\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://renci.org/#website\",\"url\":\"https://renci.org/\",\"name\":\"RENCI\",\"description\":\"Renaissance Computing Institute at UNC\",\"publisher\":{\"@id\":\"https://renci.org/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://renci.org/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://renci.org/#organization\",\"name\":\"RENCI\",\"url\":\"https://renci.org/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/#/schema/logo/image/\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"width\":467,\"height\":229,\"caption\":\"RENCI\"},\"image\":{\"@id\":\"https://renci.org/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/renci.org/\",\"https://x.com/renci\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "yoast_head_json": {
+        "title": "Research Project Management - RENCI",
+        "robots": {
+          "index": "index",
+          "follow": "follow",
+          "max-snippet": "max-snippet:-1",
+          "max-image-preview": "max-image-preview:large",
+          "max-video-preview": "max-video-preview:-1"
+        },
+        "canonical": "https://renci.org/operations/research-project-management/",
+        "og_locale": "en_US",
+        "og_type": "article",
+        "og_title": "Research Project Management - RENCI",
+        "og_description": "The Research Project Management Group provides the structure and oversight needed to guide projects from concept to completion. They coordinate timelines, budgets, resources, and communications to ensure that goals are met efficiently and deliverables meet high standards. This team works closely with researchers, technical staff, and external partners to define objectives, identify risks, and track progress, offering tools and strategies that keep complex initiatives on schedule and within scope. By balancing big-picture planning with day-to-day details, the Project Management Group enables smooth and successful execution of RENCI projects.",
+        "og_url": "https://renci.org/operations/research-project-management/",
+        "og_site_name": "RENCI",
+        "article_publisher": "https://www.facebook.com/renci.org/",
+        "article_modified_time": "2025-10-29T13:45:06+00:00",
+        "og_image": [
+          {
+            "width": 2560,
+            "height": 1280,
+            "url": "https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_451399234-scaled.jpeg",
+            "type": "image/jpeg"
           }
+        ],
+        "twitter_card": "summary_large_image",
+        "twitter_site": "@renci",
+        "schema": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://renci.org/operations/research-project-management/",
+              "url": "https://renci.org/operations/research-project-management/",
+              "name": "Research Project Management - RENCI",
+              "isPartOf": {
+                "@id": "https://renci.org/#website"
+              },
+              "primaryImageOfPage": {
+                "@id": "https://renci.org/operations/research-project-management/#primaryimage"
+              },
+              "image": {
+                "@id": "https://renci.org/operations/research-project-management/#primaryimage"
+              },
+              "thumbnailUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_451399234-scaled.jpeg",
+              "datePublished": "2025-09-18T17:34:46+00:00",
+              "dateModified": "2025-10-29T13:45:06+00:00",
+              "breadcrumb": {
+                "@id": "https://renci.org/operations/research-project-management/#breadcrumb"
+              },
+              "inLanguage": "en-US",
+              "potentialAction": [
+                {
+                  "@type": "ReadAction",
+                  "target": [
+                    "https://renci.org/operations/research-project-management/"
+                  ]
+                }
+              ]
+            },
+            {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://renci.org/operations/research-project-management/#primaryimage",
+              "url": "https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_451399234-scaled.jpeg",
+              "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_451399234-scaled.jpeg",
+              "width": 2560,
+              "height": 1280,
+              "caption": "Project management business technology concept on vr screen."
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://renci.org/operations/research-project-management/#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://renci.org/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Research Project Management"
+                }
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://renci.org/#website",
+              "url": "https://renci.org/",
+              "name": "RENCI",
+              "description": "Renaissance Computing Institute at UNC",
+              "publisher": {
+                "@id": "https://renci.org/#organization"
+              },
+              "potentialAction": [
+                {
+                  "@type": "SearchAction",
+                  "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://renci.org/?s={search_term_string}"
+                  },
+                  "query-input": {
+                    "@type": "PropertyValueSpecification",
+                    "valueRequired": true,
+                    "valueName": "search_term_string"
+                  }
+                }
+              ],
+              "inLanguage": "en-US"
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://renci.org/#organization",
+              "name": "RENCI",
+              "url": "https://renci.org/",
+              "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://renci.org/#/schema/logo/image/",
+                "url": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "width": 467,
+                "height": 229,
+                "caption": "RENCI"
+              },
+              "image": {
+                "@id": "https://renci.org/#/schema/logo/image/"
+              },
+              "sameAs": [
+                "https://www.facebook.com/renci.org/",
+                "https://x.com/renci"
+              ]
+            }
+          ]
         }
+      },
+      "mfb_rest_fields": [
+        "title",
+        "yoast_head",
+        "yoast_head_json"
       ],
-      "collection": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group"
-        }
-      ],
-      "about": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
-        }
-      ],
-      "author": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/users/120470"
-        }
-      ],
-      "version-history": [
-        {
-          "count": 4,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6607/revisions"
-        }
-      ],
-      "predecessor-version": [
-        {
-          "id": 6645,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6607/revisions/6645"
-        }
-      ],
-      "wp:featuredmedia": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/media/6485"
-        }
-      ],
-      "wp:attachment": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/media?parent=6607"
-        }
-      ],
-      "curies": [
-        {
-          "name": "wp",
-          "href": "https://api.w.org/{rel}",
-          "templated": true
-        }
-      ]
-    }
-  },
-  {
-    "id": 6605,
-    "date": "2025-09-18T13:31:51",
-    "date_gmt": "2025-09-18T17:31:51",
-    "guid": {
-      "rendered": "https://renci.org/?post_type=operations-group&#038;p=6605"
-    },
-    "modified": "2025-10-29T10:52:25",
-    "modified_gmt": "2025-10-29T14:52:25",
-    "slug": "research-operations",
-    "status": "publish",
-    "type": "operations-group",
-    "link": "https://renci.org/operations/research-operations/",
-    "title": {
-      "rendered": "Research Operations"
-    },
-    "excerpt": {
-      "rendered": "\u003Cp\u003EThe Research Operations Group provides the essential backbone that keeps RENCI running smoothly and efficiently. They handle the day-to-day operations that allow staff and leadership to focus on their core work—managing schedules, coordinating meetings and events, maintaining records, and ensuring compliance with policies and procedures. They often serve as the first point of contact for internal and external inquiries, facilitate communication across RENCI groups, and support hiring, onboarding, and other personnel needs.\u003C/p\u003E\n\u003Cp\u003EIn particular, the Research Ops Group is the point of contact for availability and questions related to the RENCI Office of the Director (OOD).\u003C/p\u003E\n",
-      "protected": false
-    },
-    "author": 120470,
-    "featured_media": 1918,
-    "template": "",
-    "meta": {
-      "_acf_changed": false,
-      "_relevanssi_hide_post": "",
-      "_relevanssi_hide_content": "",
-      "_relevanssi_pin_for_all": "",
-      "_relevanssi_pin_keywords": "",
-      "_relevanssi_unpin_keywords": "",
-      "_relevanssi_related_keywords": "",
-      "_relevanssi_related_include_ids": "",
-      "_relevanssi_related_exclude_ids": "",
-      "_relevanssi_related_no_append": "",
-      "_relevanssi_related_not_related": "",
-      "_relevanssi_related_posts": "",
-      "_relevanssi_noindex_reason": "",
-      "_EventAllDay": false,
-      "_EventTimezone": "",
-      "_EventStartDate": "",
-      "_EventEndDate": "",
-      "_EventStartDateUTC": "",
-      "_EventEndDateUTC": "",
-      "_EventShowMap": false,
-      "_EventShowMapLink": false,
-      "_EventURL": "",
-      "_EventCost": "",
-      "_EventCostDescription": "",
-      "_EventCurrencySymbol": "",
-      "_EventCurrencyCode": "",
-      "_EventCurrencyPosition": "",
-      "_EventDateTimeSeparator": "",
-      "_EventTimeRangeSeparator": "",
-      "_EventOrganizerID": [],
-      "_EventVenueID": [],
-      "_OrganizerEmail": "",
-      "_OrganizerPhone": "",
-      "_OrganizerWebsite": "",
-      "_VenueAddress": "",
-      "_VenueCity": "",
-      "_VenueCountry": "",
-      "_VenueProvince": "",
-      "_VenueState": "",
-      "_VenueZip": "",
-      "_VenuePhone": "",
-      "_VenueURL": "",
-      "_VenueStateProvince": "",
-      "_VenueLat": "",
-      "_VenueLng": "",
-      "_VenueShowMap": false,
-      "_VenueShowMapLink": false
-    },
-    "class_list": [
-      "post-6605",
-      "operations-group",
-      "type-operations-group",
-      "status-publish",
-      "has-post-thumbnail",
-      "hentry"
-    ],
-    "acf": [],
-    "mb": [],
-    "mfb_rest_fields": [
-      "title"
-    ],
-    "_links": {
-      "self": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6605",
-          "targetHints": {
-            "allow": [
-              "GET"
-            ]
+      "_links": {
+        "self": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6607",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
           }
-        }
-      ],
-      "collection": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group"
-        }
-      ],
-      "about": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
-        }
-      ],
-      "author": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/users/120470"
-        }
-      ],
-      "version-history": [
-        {
-          "count": 3,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6605/revisions"
-        }
-      ],
-      "predecessor-version": [
-        {
-          "id": 6643,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6605/revisions/6643"
-        }
-      ],
-      "wp:featuredmedia": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/media/1918"
-        }
-      ],
-      "wp:attachment": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/media?parent=6605"
-        }
-      ],
-      "curies": [
-        {
-          "name": "wp",
-          "href": "https://api.w.org/{rel}",
-          "templated": true
-        }
-      ]
-    }
-  },
-  {
-    "id": 6603,
-    "date": "2025-09-18T13:26:56",
-    "date_gmt": "2025-09-18T17:26:56",
-    "guid": {
-      "rendered": "https://renci.org/?post_type=operations-group&#038;p=6603"
-    },
-    "modified": "2025-10-29T10:52:37",
-    "modified_gmt": "2025-10-29T14:52:37",
-    "slug": "ood",
-    "status": "publish",
-    "type": "operations-group",
-    "link": "https://renci.org/operations/ood/",
-    "title": {
-      "rendered": "Office of the Director"
-    },
-    "excerpt": {
-      "rendered": "\u003Cp\u003EThe RENCI Office of the Director (OOD) serves as the central hub for leadership and coordination across the organization. It supports the director in setting strategic priorities, making key decisions, and ensuring that all programs and initiatives align with the organization’s mission and goals. OOD oversees high-level planning, policy development, and external relations, while also managing internal communications.\u003C/p\u003E\n",
-      "protected": false
-    },
-    "author": 120470,
-    "featured_media": 6503,
-    "template": "",
-    "meta": {
-      "_acf_changed": false,
-      "_relevanssi_hide_post": "",
-      "_relevanssi_hide_content": "",
-      "_relevanssi_pin_for_all": "",
-      "_relevanssi_pin_keywords": "",
-      "_relevanssi_unpin_keywords": "",
-      "_relevanssi_related_keywords": "",
-      "_relevanssi_related_include_ids": "",
-      "_relevanssi_related_exclude_ids": "",
-      "_relevanssi_related_no_append": "",
-      "_relevanssi_related_not_related": "",
-      "_relevanssi_related_posts": "",
-      "_relevanssi_noindex_reason": "",
-      "_EventAllDay": false,
-      "_EventTimezone": "",
-      "_EventStartDate": "",
-      "_EventEndDate": "",
-      "_EventStartDateUTC": "",
-      "_EventEndDateUTC": "",
-      "_EventShowMap": false,
-      "_EventShowMapLink": false,
-      "_EventURL": "",
-      "_EventCost": "",
-      "_EventCostDescription": "",
-      "_EventCurrencySymbol": "",
-      "_EventCurrencyCode": "",
-      "_EventCurrencyPosition": "",
-      "_EventDateTimeSeparator": "",
-      "_EventTimeRangeSeparator": "",
-      "_EventOrganizerID": [],
-      "_EventVenueID": [],
-      "_OrganizerEmail": "",
-      "_OrganizerPhone": "",
-      "_OrganizerWebsite": "",
-      "_VenueAddress": "",
-      "_VenueCity": "",
-      "_VenueCountry": "",
-      "_VenueProvince": "",
-      "_VenueState": "",
-      "_VenueZip": "",
-      "_VenuePhone": "",
-      "_VenueURL": "",
-      "_VenueStateProvince": "",
-      "_VenueLat": "",
-      "_VenueLng": "",
-      "_VenueShowMap": false,
-      "_VenueShowMapLink": false
-    },
-    "class_list": [
-      "post-6603",
-      "operations-group",
-      "type-operations-group",
-      "status-publish",
-      "has-post-thumbnail",
-      "hentry"
-    ],
-    "acf": [],
-    "mb": [],
-    "mfb_rest_fields": [
-      "title"
-    ],
-    "_links": {
-      "self": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6603",
-          "targetHints": {
-            "allow": [
-              "GET"
-            ]
+        ],
+        "collection": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group"
           }
-        }
-      ],
-      "collection": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group"
-        }
-      ],
-      "about": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
-        }
-      ],
-      "author": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/users/120470"
-        }
-      ],
-      "version-history": [
-        {
-          "count": 4,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6603/revisions"
-        }
-      ],
-      "predecessor-version": [
-        {
-          "id": 6674,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6603/revisions/6674"
-        }
-      ],
-      "wp:featuredmedia": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/media/6503"
-        }
-      ],
-      "wp:attachment": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/media?parent=6603"
-        }
-      ],
-      "curies": [
-        {
-          "name": "wp",
-          "href": "https://api.w.org/{rel}",
-          "templated": true
-        }
-      ]
-    }
-  },
-  {
-    "id": 6601,
-    "date": "2025-09-18T13:22:09",
-    "date_gmt": "2025-09-18T17:22:09",
-    "guid": {
-      "rendered": "https://renci.org/?post_type=operations-group&#038;p=6601"
-    },
-    "modified": "2025-10-29T10:53:10",
-    "modified_gmt": "2025-10-29T14:53:10",
-    "slug": "management-team",
-    "status": "publish",
-    "type": "operations-group",
-    "link": "https://renci.org/operations/management-team/",
-    "title": {
-      "rendered": "Management Team"
-    },
-    "excerpt": {
-      "rendered": "\u003Cp\u003EThe RENCI Management Team is comprised of staff who oversee other staff. The team comes together to discuss key strategies and ensure that RENCI operates effectively. They work to translate RENCI’s mission and vision into actionable plans; provide guidance and support to staff; foster collaboration across units; and monitor progress to keep initiatives on track.\u003C/p\u003E\n",
-      "protected": false
-    },
-    "author": 120470,
-    "featured_media": 6494,
-    "template": "",
-    "meta": {
-      "_acf_changed": false,
-      "_relevanssi_hide_post": "",
-      "_relevanssi_hide_content": "",
-      "_relevanssi_pin_for_all": "",
-      "_relevanssi_pin_keywords": "",
-      "_relevanssi_unpin_keywords": "",
-      "_relevanssi_related_keywords": "",
-      "_relevanssi_related_include_ids": "",
-      "_relevanssi_related_exclude_ids": "",
-      "_relevanssi_related_no_append": "",
-      "_relevanssi_related_not_related": "",
-      "_relevanssi_related_posts": "",
-      "_relevanssi_noindex_reason": "",
-      "_EventAllDay": false,
-      "_EventTimezone": "",
-      "_EventStartDate": "",
-      "_EventEndDate": "",
-      "_EventStartDateUTC": "",
-      "_EventEndDateUTC": "",
-      "_EventShowMap": false,
-      "_EventShowMapLink": false,
-      "_EventURL": "",
-      "_EventCost": "",
-      "_EventCostDescription": "",
-      "_EventCurrencySymbol": "",
-      "_EventCurrencyCode": "",
-      "_EventCurrencyPosition": "",
-      "_EventDateTimeSeparator": "",
-      "_EventTimeRangeSeparator": "",
-      "_EventOrganizerID": [],
-      "_EventVenueID": [],
-      "_OrganizerEmail": "",
-      "_OrganizerPhone": "",
-      "_OrganizerWebsite": "",
-      "_VenueAddress": "",
-      "_VenueCity": "",
-      "_VenueCountry": "",
-      "_VenueProvince": "",
-      "_VenueState": "",
-      "_VenueZip": "",
-      "_VenuePhone": "",
-      "_VenueURL": "",
-      "_VenueStateProvince": "",
-      "_VenueLat": "",
-      "_VenueLng": "",
-      "_VenueShowMap": false,
-      "_VenueShowMapLink": false
-    },
-    "class_list": [
-      "post-6601",
-      "operations-group",
-      "type-operations-group",
-      "status-publish",
-      "has-post-thumbnail",
-      "hentry"
-    ],
-    "acf": [],
-    "mb": [],
-    "mfb_rest_fields": [
-      "title"
-    ],
-    "_links": {
-      "self": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6601",
-          "targetHints": {
-            "allow": [
-              "GET"
-            ]
+        ],
+        "about": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
           }
-        }
-      ],
-      "collection": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group"
-        }
-      ],
-      "about": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
-        }
-      ],
-      "author": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/users/120470"
-        }
-      ],
-      "version-history": [
-        {
-          "count": 5,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6601/revisions"
-        }
-      ],
-      "predecessor-version": [
-        {
-          "id": 7848,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6601/revisions/7848"
-        }
-      ],
-      "wp:featuredmedia": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/media/6494"
-        }
-      ],
-      "wp:attachment": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/media?parent=6601"
-        }
-      ],
-      "curies": [
-        {
-          "name": "wp",
-          "href": "https://api.w.org/{rel}",
-          "templated": true
-        }
-      ]
-    }
-  },
-  {
-    "id": 6594,
-    "date": "2025-09-18T13:05:50",
-    "date_gmt": "2025-09-18T17:05:50",
-    "guid": {
-      "rendered": "https://renci.org/?post_type=operations-group&#038;p=6594"
-    },
-    "modified": "2025-10-29T10:53:20",
-    "modified_gmt": "2025-10-29T14:53:20",
-    "slug": "comms-and-outreach",
-    "status": "publish",
-    "type": "operations-group",
-    "link": "https://renci.org/operations/comms-and-outreach/",
-    "title": {
-      "rendered": "Communications and Outreach"
-    },
-    "excerpt": {
-      "rendered": "\u003Cp\u003EThe Communications and Outreach Group focuses on four core areas that serve both the institute as a whole and the unique identities of many funded, stand-alone projects:\u003Cbr /\u003E\n1) Communications and branding – developing and executing strategies for communications, marketing, and brand identity.\u003Cbr /\u003E\n2) Web development and design – creating and, when needed, maintaining general websites and scientific web applications with an emphasis on intuitive user interfaces and engaging user experiences.\u003Cbr /\u003E\n3) User engagement – designing and implementing strategies to connect scientific communities with products developed by RENCI and its partners.\u003Cbr /\u003E\n4) Public engagement with data science – fostering opportunities for broad communities to understand and interact with data science research and its societal impacts. \u003C/p\u003E\n",
-      "protected": false
-    },
-    "author": 120470,
-    "featured_media": 6507,
-    "template": "",
-    "meta": {
-      "_acf_changed": false,
-      "_relevanssi_hide_post": "",
-      "_relevanssi_hide_content": "",
-      "_relevanssi_pin_for_all": "",
-      "_relevanssi_pin_keywords": "",
-      "_relevanssi_unpin_keywords": "",
-      "_relevanssi_related_keywords": "",
-      "_relevanssi_related_include_ids": "",
-      "_relevanssi_related_exclude_ids": "",
-      "_relevanssi_related_no_append": "",
-      "_relevanssi_related_not_related": "",
-      "_relevanssi_related_posts": "",
-      "_relevanssi_noindex_reason": "",
-      "_EventAllDay": false,
-      "_EventTimezone": "",
-      "_EventStartDate": "",
-      "_EventEndDate": "",
-      "_EventStartDateUTC": "",
-      "_EventEndDateUTC": "",
-      "_EventShowMap": false,
-      "_EventShowMapLink": false,
-      "_EventURL": "",
-      "_EventCost": "",
-      "_EventCostDescription": "",
-      "_EventCurrencySymbol": "",
-      "_EventCurrencyCode": "",
-      "_EventCurrencyPosition": "",
-      "_EventDateTimeSeparator": "",
-      "_EventTimeRangeSeparator": "",
-      "_EventOrganizerID": [],
-      "_EventVenueID": [],
-      "_OrganizerEmail": "",
-      "_OrganizerPhone": "",
-      "_OrganizerWebsite": "",
-      "_VenueAddress": "",
-      "_VenueCity": "",
-      "_VenueCountry": "",
-      "_VenueProvince": "",
-      "_VenueState": "",
-      "_VenueZip": "",
-      "_VenuePhone": "",
-      "_VenueURL": "",
-      "_VenueStateProvince": "",
-      "_VenueLat": "",
-      "_VenueLng": "",
-      "_VenueShowMap": false,
-      "_VenueShowMapLink": false
-    },
-    "class_list": [
-      "post-6594",
-      "operations-group",
-      "type-operations-group",
-      "status-publish",
-      "has-post-thumbnail",
-      "hentry"
-    ],
-    "acf": [],
-    "mb": [],
-    "mfb_rest_fields": [
-      "title"
-    ],
-    "_links": {
-      "self": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6594",
-          "targetHints": {
-            "allow": [
-              "GET"
-            ]
+        ],
+        "author": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/users/120470"
           }
-        }
-      ],
-      "collection": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group"
-        }
-      ],
-      "about": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
-        }
-      ],
-      "author": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/users/120470"
-        }
-      ],
-      "version-history": [
-        {
-          "count": 9,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6594/revisions"
-        }
-      ],
-      "predecessor-version": [
-        {
-          "id": 6673,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6594/revisions/6673"
-        }
-      ],
-      "wp:featuredmedia": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/media/6507"
-        }
-      ],
-      "wp:attachment": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/media?parent=6594"
-        }
-      ],
-      "curies": [
-        {
-          "name": "wp",
-          "href": "https://api.w.org/{rel}",
-          "templated": true
-        }
-      ]
-    }
-  },
-  {
-    "id": 6586,
-    "date": "2025-09-18T12:51:06",
-    "date_gmt": "2025-09-18T16:51:06",
-    "guid": {
-      "rendered": "https://renci.org/?post_type=operations-group&#038;p=6586"
-    },
-    "modified": "2025-10-29T10:53:59",
-    "modified_gmt": "2025-10-29T14:53:59",
-    "slug": "acis",
-    "status": "publish",
-    "type": "operations-group",
-    "link": "https://renci.org/operations/acis/",
-    "title": {
-      "rendered": "Advanced Cyberinfrastructure Support"
-    },
-    "excerpt": {
-      "rendered": "\u003Cp\u003EThe Advanced Cyberinfrastructure Support (ACIS) Team provides a wide range of IT services and support across all groups at RENCI, and is responsible for managing infrastructure in the cloud and on premise in the RENCI datacenter. The team oversees services ranging from high performance computing, enterprise storage, and virtualization to desktop and audio/video conference room support.\u003C/p\u003E\n",
-      "protected": false
-    },
-    "author": 120470,
-    "featured_media": 1917,
-    "template": "",
-    "meta": {
-      "_acf_changed": false,
-      "_relevanssi_hide_post": "",
-      "_relevanssi_hide_content": "",
-      "_relevanssi_pin_for_all": "",
-      "_relevanssi_pin_keywords": "",
-      "_relevanssi_unpin_keywords": "",
-      "_relevanssi_related_keywords": "",
-      "_relevanssi_related_include_ids": "",
-      "_relevanssi_related_exclude_ids": "",
-      "_relevanssi_related_no_append": "",
-      "_relevanssi_related_not_related": "",
-      "_relevanssi_related_posts": "",
-      "_relevanssi_noindex_reason": "",
-      "_EventAllDay": false,
-      "_EventTimezone": "",
-      "_EventStartDate": "",
-      "_EventEndDate": "",
-      "_EventStartDateUTC": "",
-      "_EventEndDateUTC": "",
-      "_EventShowMap": false,
-      "_EventShowMapLink": false,
-      "_EventURL": "",
-      "_EventCost": "",
-      "_EventCostDescription": "",
-      "_EventCurrencySymbol": "",
-      "_EventCurrencyCode": "",
-      "_EventCurrencyPosition": "",
-      "_EventDateTimeSeparator": "",
-      "_EventTimeRangeSeparator": "",
-      "_EventOrganizerID": [],
-      "_EventVenueID": [],
-      "_OrganizerEmail": "",
-      "_OrganizerPhone": "",
-      "_OrganizerWebsite": "",
-      "_VenueAddress": "",
-      "_VenueCity": "",
-      "_VenueCountry": "",
-      "_VenueProvince": "",
-      "_VenueState": "",
-      "_VenueZip": "",
-      "_VenuePhone": "",
-      "_VenueURL": "",
-      "_VenueStateProvince": "",
-      "_VenueLat": "",
-      "_VenueLng": "",
-      "_VenueShowMap": false,
-      "_VenueShowMapLink": false
-    },
-    "class_list": [
-      "post-6586",
-      "operations-group",
-      "type-operations-group",
-      "status-publish",
-      "has-post-thumbnail",
-      "hentry"
-    ],
-    "acf": [],
-    "mb": [],
-    "mfb_rest_fields": [
-      "title"
-    ],
-    "_links": {
-      "self": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6586",
-          "targetHints": {
-            "allow": [
-              "GET"
-            ]
+        ],
+        "version-history": [
+          {
+            "count": 4,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6607/revisions"
           }
-        }
+        ],
+        "predecessor-version": [
+          {
+            "id": 6645,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6607/revisions/6645"
+          }
+        ],
+        "wp:featuredmedia": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/media/6485"
+          }
+        ],
+        "wp:attachment": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/media?parent=6607"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 6605,
+      "date": "2025-09-18T13:31:51",
+      "date_gmt": "2025-09-18T17:31:51",
+      "guid": {
+        "rendered": "https://renci.org/?post_type=operations-group&#038;p=6605"
+      },
+      "modified": "2025-10-29T10:52:25",
+      "modified_gmt": "2025-10-29T14:52:25",
+      "slug": "research-operations",
+      "status": "publish",
+      "type": "operations-group",
+      "link": "https://renci.org/operations/research-operations/",
+      "title": {
+        "rendered": "Research Operations"
+      },
+      "excerpt": {
+        "rendered": "<p>The Research Operations Group provides the essential backbone that keeps RENCI running smoothly and efficiently. They handle the day-to-day operations that allow staff and leadership to focus on their core work—managing schedules, coordinating meetings and events, maintaining records, and ensuring compliance with policies and procedures. They often serve as the first point of contact for internal and external inquiries, facilitate communication across RENCI groups, and support hiring, onboarding, and other personnel needs.</p>\n<p>In particular, the Research Ops Group is the point of contact for availability and questions related to the RENCI Office of the Director (OOD).</p>\n",
+        "protected": false
+      },
+      "author": 120470,
+      "featured_media": 1918,
+      "template": "",
+      "meta": {
+        "_acf_changed": false,
+        "_relevanssi_hide_post": "",
+        "_relevanssi_hide_content": "",
+        "_relevanssi_pin_for_all": "",
+        "_relevanssi_pin_keywords": "",
+        "_relevanssi_unpin_keywords": "",
+        "_relevanssi_related_keywords": "",
+        "_relevanssi_related_include_ids": "",
+        "_relevanssi_related_exclude_ids": "",
+        "_relevanssi_related_no_append": "",
+        "_relevanssi_related_not_related": "",
+        "_relevanssi_related_posts": "",
+        "_relevanssi_noindex_reason": "",
+        "_EventAllDay": false,
+        "_EventTimezone": "",
+        "_EventStartDate": "",
+        "_EventEndDate": "",
+        "_EventStartDateUTC": "",
+        "_EventEndDateUTC": "",
+        "_EventShowMap": false,
+        "_EventShowMapLink": false,
+        "_EventURL": "",
+        "_EventCost": "",
+        "_EventCostDescription": "",
+        "_EventCurrencySymbol": "",
+        "_EventCurrencyCode": "",
+        "_EventCurrencyPosition": "",
+        "_EventDateTimeSeparator": "",
+        "_EventTimeRangeSeparator": "",
+        "_EventOrganizerID": [],
+        "_EventVenueID": [],
+        "_OrganizerEmail": "",
+        "_OrganizerPhone": "",
+        "_OrganizerWebsite": "",
+        "_VenueAddress": "",
+        "_VenueCity": "",
+        "_VenueCountry": "",
+        "_VenueProvince": "",
+        "_VenueState": "",
+        "_VenueZip": "",
+        "_VenuePhone": "",
+        "_VenueURL": "",
+        "_VenueStateProvince": "",
+        "_VenueLat": "",
+        "_VenueLng": "",
+        "_VenueShowMap": false,
+        "_VenueShowMapLink": false,
+        "_tribe_blocks_recurrence_rules": "",
+        "_tribe_blocks_recurrence_description": "",
+        "_tribe_blocks_recurrence_exclusions": ""
+      },
+      "class_list": [
+        "post-6605",
+        "operations-group",
+        "type-operations-group",
+        "status-publish",
+        "has-post-thumbnail",
+        "hentry"
       ],
-      "collection": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/operations-group"
+      "acf": [],
+      "mb": [],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Research Operations - RENCI</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://renci.org/operations/research-operations/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Research Operations - RENCI\" />\n<meta property=\"og:description\" content=\"The Research Operations Group provides the essential backbone that keeps RENCI running smoothly and efficiently. They handle the day-to-day operations that allow staff and leadership to focus on their core work—managing schedules, coordinating meetings and events, maintaining records, and ensuring compliance with policies and procedures. They often serve as the first point of contact for internal and external inquiries, facilitate communication across RENCI groups, and support hiring, onboarding, and other personnel needs.  In particular, the Research Ops Group is the point of contact for availability and questions related to the RENCI Office of the Director (OOD).\" />\n<meta property=\"og:url\" content=\"https://renci.org/operations/research-operations/\" />\n<meta property=\"og:site_name\" content=\"RENCI\" />\n<meta property=\"article:publisher\" content=\"https://www.facebook.com/renci.org/\" />\n<meta property=\"article:modified_time\" content=\"2025-10-29T14:52:25+00:00\" />\n<meta property=\"og:image\" content=\"https://renci.org/wp-content/uploads/sites/1447/2025/06/coordination-team_featuredimg.jpeg\" />\n\t<meta property=\"og:image:width\" content=\"1600\" />\n\t<meta property=\"og:image:height\" content=\"768\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:site\" content=\"@renci\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://renci.org/operations/research-operations/\",\"url\":\"https://renci.org/operations/research-operations/\",\"name\":\"Research Operations - RENCI\",\"isPartOf\":{\"@id\":\"https://renci.org/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://renci.org/operations/research-operations/#primaryimage\"},\"image\":{\"@id\":\"https://renci.org/operations/research-operations/#primaryimage\"},\"thumbnailUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/coordination-team_featuredimg.jpeg\",\"datePublished\":\"2025-09-18T17:31:51+00:00\",\"dateModified\":\"2025-10-29T14:52:25+00:00\",\"breadcrumb\":{\"@id\":\"https://renci.org/operations/research-operations/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://renci.org/operations/research-operations/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/operations/research-operations/#primaryimage\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/coordination-team_featuredimg.jpeg\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/coordination-team_featuredimg.jpeg\",\"width\":1600,\"height\":768},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://renci.org/operations/research-operations/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://renci.org/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Research Operations\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://renci.org/#website\",\"url\":\"https://renci.org/\",\"name\":\"RENCI\",\"description\":\"Renaissance Computing Institute at UNC\",\"publisher\":{\"@id\":\"https://renci.org/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://renci.org/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://renci.org/#organization\",\"name\":\"RENCI\",\"url\":\"https://renci.org/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/#/schema/logo/image/\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"width\":467,\"height\":229,\"caption\":\"RENCI\"},\"image\":{\"@id\":\"https://renci.org/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/renci.org/\",\"https://x.com/renci\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "yoast_head_json": {
+        "title": "Research Operations - RENCI",
+        "robots": {
+          "index": "index",
+          "follow": "follow",
+          "max-snippet": "max-snippet:-1",
+          "max-image-preview": "max-image-preview:large",
+          "max-video-preview": "max-video-preview:-1"
+        },
+        "canonical": "https://renci.org/operations/research-operations/",
+        "og_locale": "en_US",
+        "og_type": "article",
+        "og_title": "Research Operations - RENCI",
+        "og_description": "The Research Operations Group provides the essential backbone that keeps RENCI running smoothly and efficiently. They handle the day-to-day operations that allow staff and leadership to focus on their core work—managing schedules, coordinating meetings and events, maintaining records, and ensuring compliance with policies and procedures. They often serve as the first point of contact for internal and external inquiries, facilitate communication across RENCI groups, and support hiring, onboarding, and other personnel needs.  In particular, the Research Ops Group is the point of contact for availability and questions related to the RENCI Office of the Director (OOD).",
+        "og_url": "https://renci.org/operations/research-operations/",
+        "og_site_name": "RENCI",
+        "article_publisher": "https://www.facebook.com/renci.org/",
+        "article_modified_time": "2025-10-29T14:52:25+00:00",
+        "og_image": [
+          {
+            "width": 1600,
+            "height": 768,
+            "url": "https://renci.org/wp-content/uploads/sites/1447/2025/06/coordination-team_featuredimg.jpeg",
+            "type": "image/jpeg"
+          }
+        ],
+        "twitter_card": "summary_large_image",
+        "twitter_site": "@renci",
+        "schema": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://renci.org/operations/research-operations/",
+              "url": "https://renci.org/operations/research-operations/",
+              "name": "Research Operations - RENCI",
+              "isPartOf": {
+                "@id": "https://renci.org/#website"
+              },
+              "primaryImageOfPage": {
+                "@id": "https://renci.org/operations/research-operations/#primaryimage"
+              },
+              "image": {
+                "@id": "https://renci.org/operations/research-operations/#primaryimage"
+              },
+              "thumbnailUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/06/coordination-team_featuredimg.jpeg",
+              "datePublished": "2025-09-18T17:31:51+00:00",
+              "dateModified": "2025-10-29T14:52:25+00:00",
+              "breadcrumb": {
+                "@id": "https://renci.org/operations/research-operations/#breadcrumb"
+              },
+              "inLanguage": "en-US",
+              "potentialAction": [
+                {
+                  "@type": "ReadAction",
+                  "target": [
+                    "https://renci.org/operations/research-operations/"
+                  ]
+                }
+              ]
+            },
+            {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://renci.org/operations/research-operations/#primaryimage",
+              "url": "https://renci.org/wp-content/uploads/sites/1447/2025/06/coordination-team_featuredimg.jpeg",
+              "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/06/coordination-team_featuredimg.jpeg",
+              "width": 1600,
+              "height": 768
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://renci.org/operations/research-operations/#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://renci.org/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Research Operations"
+                }
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://renci.org/#website",
+              "url": "https://renci.org/",
+              "name": "RENCI",
+              "description": "Renaissance Computing Institute at UNC",
+              "publisher": {
+                "@id": "https://renci.org/#organization"
+              },
+              "potentialAction": [
+                {
+                  "@type": "SearchAction",
+                  "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://renci.org/?s={search_term_string}"
+                  },
+                  "query-input": {
+                    "@type": "PropertyValueSpecification",
+                    "valueRequired": true,
+                    "valueName": "search_term_string"
+                  }
+                }
+              ],
+              "inLanguage": "en-US"
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://renci.org/#organization",
+              "name": "RENCI",
+              "url": "https://renci.org/",
+              "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://renci.org/#/schema/logo/image/",
+                "url": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "width": 467,
+                "height": 229,
+                "caption": "RENCI"
+              },
+              "image": {
+                "@id": "https://renci.org/#/schema/logo/image/"
+              },
+              "sameAs": [
+                "https://www.facebook.com/renci.org/",
+                "https://x.com/renci"
+              ]
+            }
+          ]
         }
+      },
+      "mfb_rest_fields": [
+        "title",
+        "yoast_head",
+        "yoast_head_json"
       ],
-      "about": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
-        }
+      "_links": {
+        "self": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6605",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
+          }
+        ],
+        "author": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/users/120470"
+          }
+        ],
+        "version-history": [
+          {
+            "count": 3,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6605/revisions"
+          }
+        ],
+        "predecessor-version": [
+          {
+            "id": 6643,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6605/revisions/6643"
+          }
+        ],
+        "wp:featuredmedia": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/media/1918"
+          }
+        ],
+        "wp:attachment": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/media?parent=6605"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 6603,
+      "date": "2025-09-18T13:26:56",
+      "date_gmt": "2025-09-18T17:26:56",
+      "guid": {
+        "rendered": "https://renci.org/?post_type=operations-group&#038;p=6603"
+      },
+      "modified": "2025-10-29T10:52:37",
+      "modified_gmt": "2025-10-29T14:52:37",
+      "slug": "ood",
+      "status": "publish",
+      "type": "operations-group",
+      "link": "https://renci.org/operations/ood/",
+      "title": {
+        "rendered": "Office of the Director"
+      },
+      "excerpt": {
+        "rendered": "<p>The RENCI Office of the Director (OOD) serves as the central hub for leadership and coordination across the organization. It supports the director in setting strategic priorities, making key decisions, and ensuring that all programs and initiatives align with the organization’s mission and goals. OOD oversees high-level planning, policy development, and external relations, while also managing internal communications.</p>\n",
+        "protected": false
+      },
+      "author": 120470,
+      "featured_media": 6503,
+      "template": "",
+      "meta": {
+        "_acf_changed": false,
+        "_relevanssi_hide_post": "",
+        "_relevanssi_hide_content": "",
+        "_relevanssi_pin_for_all": "",
+        "_relevanssi_pin_keywords": "",
+        "_relevanssi_unpin_keywords": "",
+        "_relevanssi_related_keywords": "",
+        "_relevanssi_related_include_ids": "",
+        "_relevanssi_related_exclude_ids": "",
+        "_relevanssi_related_no_append": "",
+        "_relevanssi_related_not_related": "",
+        "_relevanssi_related_posts": "",
+        "_relevanssi_noindex_reason": "",
+        "_EventAllDay": false,
+        "_EventTimezone": "",
+        "_EventStartDate": "",
+        "_EventEndDate": "",
+        "_EventStartDateUTC": "",
+        "_EventEndDateUTC": "",
+        "_EventShowMap": false,
+        "_EventShowMapLink": false,
+        "_EventURL": "",
+        "_EventCost": "",
+        "_EventCostDescription": "",
+        "_EventCurrencySymbol": "",
+        "_EventCurrencyCode": "",
+        "_EventCurrencyPosition": "",
+        "_EventDateTimeSeparator": "",
+        "_EventTimeRangeSeparator": "",
+        "_EventOrganizerID": [],
+        "_EventVenueID": [],
+        "_OrganizerEmail": "",
+        "_OrganizerPhone": "",
+        "_OrganizerWebsite": "",
+        "_VenueAddress": "",
+        "_VenueCity": "",
+        "_VenueCountry": "",
+        "_VenueProvince": "",
+        "_VenueState": "",
+        "_VenueZip": "",
+        "_VenuePhone": "",
+        "_VenueURL": "",
+        "_VenueStateProvince": "",
+        "_VenueLat": "",
+        "_VenueLng": "",
+        "_VenueShowMap": false,
+        "_VenueShowMapLink": false,
+        "_tribe_blocks_recurrence_rules": "",
+        "_tribe_blocks_recurrence_description": "",
+        "_tribe_blocks_recurrence_exclusions": ""
+      },
+      "class_list": [
+        "post-6603",
+        "operations-group",
+        "type-operations-group",
+        "status-publish",
+        "has-post-thumbnail",
+        "hentry"
       ],
-      "author": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/users/120470"
+      "acf": [],
+      "mb": [],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Office of the Director - RENCI</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://renci.org/operations/ood/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Office of the Director - RENCI\" />\n<meta property=\"og:description\" content=\"The RENCI Office of the Director (OOD) serves as the central hub for leadership and coordination across the organization. It supports the director in setting strategic priorities, making key decisions, and ensuring that all programs and initiatives align with the organization’s mission and goals. OOD oversees high-level planning, policy development, and external relations, while also managing internal communications.\" />\n<meta property=\"og:url\" content=\"https://renci.org/operations/ood/\" />\n<meta property=\"og:site_name\" content=\"RENCI\" />\n<meta property=\"article:publisher\" content=\"https://www.facebook.com/renci.org/\" />\n<meta property=\"article:modified_time\" content=\"2025-10-29T14:52:37+00:00\" />\n<meta property=\"og:image\" content=\"https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_371388626-scaled.jpeg\" />\n\t<meta property=\"og:image:width\" content=\"2560\" />\n\t<meta property=\"og:image:height\" content=\"1300\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:site\" content=\"@renci\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://renci.org/operations/ood/\",\"url\":\"https://renci.org/operations/ood/\",\"name\":\"Office of the Director - RENCI\",\"isPartOf\":{\"@id\":\"https://renci.org/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://renci.org/operations/ood/#primaryimage\"},\"image\":{\"@id\":\"https://renci.org/operations/ood/#primaryimage\"},\"thumbnailUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_371388626-scaled.jpeg\",\"datePublished\":\"2025-09-18T17:26:56+00:00\",\"dateModified\":\"2025-10-29T14:52:37+00:00\",\"breadcrumb\":{\"@id\":\"https://renci.org/operations/ood/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://renci.org/operations/ood/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/operations/ood/#primaryimage\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_371388626-scaled.jpeg\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_371388626-scaled.jpeg\",\"width\":2560,\"height\":1300,\"caption\":\"Concept of project management with icons on wooden cubes\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://renci.org/operations/ood/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://renci.org/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Office of the Director\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://renci.org/#website\",\"url\":\"https://renci.org/\",\"name\":\"RENCI\",\"description\":\"Renaissance Computing Institute at UNC\",\"publisher\":{\"@id\":\"https://renci.org/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://renci.org/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://renci.org/#organization\",\"name\":\"RENCI\",\"url\":\"https://renci.org/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/#/schema/logo/image/\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"width\":467,\"height\":229,\"caption\":\"RENCI\"},\"image\":{\"@id\":\"https://renci.org/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/renci.org/\",\"https://x.com/renci\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "yoast_head_json": {
+        "title": "Office of the Director - RENCI",
+        "robots": {
+          "index": "index",
+          "follow": "follow",
+          "max-snippet": "max-snippet:-1",
+          "max-image-preview": "max-image-preview:large",
+          "max-video-preview": "max-video-preview:-1"
+        },
+        "canonical": "https://renci.org/operations/ood/",
+        "og_locale": "en_US",
+        "og_type": "article",
+        "og_title": "Office of the Director - RENCI",
+        "og_description": "The RENCI Office of the Director (OOD) serves as the central hub for leadership and coordination across the organization. It supports the director in setting strategic priorities, making key decisions, and ensuring that all programs and initiatives align with the organization’s mission and goals. OOD oversees high-level planning, policy development, and external relations, while also managing internal communications.",
+        "og_url": "https://renci.org/operations/ood/",
+        "og_site_name": "RENCI",
+        "article_publisher": "https://www.facebook.com/renci.org/",
+        "article_modified_time": "2025-10-29T14:52:37+00:00",
+        "og_image": [
+          {
+            "width": 2560,
+            "height": 1300,
+            "url": "https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_371388626-scaled.jpeg",
+            "type": "image/jpeg"
+          }
+        ],
+        "twitter_card": "summary_large_image",
+        "twitter_site": "@renci",
+        "schema": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://renci.org/operations/ood/",
+              "url": "https://renci.org/operations/ood/",
+              "name": "Office of the Director - RENCI",
+              "isPartOf": {
+                "@id": "https://renci.org/#website"
+              },
+              "primaryImageOfPage": {
+                "@id": "https://renci.org/operations/ood/#primaryimage"
+              },
+              "image": {
+                "@id": "https://renci.org/operations/ood/#primaryimage"
+              },
+              "thumbnailUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_371388626-scaled.jpeg",
+              "datePublished": "2025-09-18T17:26:56+00:00",
+              "dateModified": "2025-10-29T14:52:37+00:00",
+              "breadcrumb": {
+                "@id": "https://renci.org/operations/ood/#breadcrumb"
+              },
+              "inLanguage": "en-US",
+              "potentialAction": [
+                {
+                  "@type": "ReadAction",
+                  "target": [
+                    "https://renci.org/operations/ood/"
+                  ]
+                }
+              ]
+            },
+            {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://renci.org/operations/ood/#primaryimage",
+              "url": "https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_371388626-scaled.jpeg",
+              "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_371388626-scaled.jpeg",
+              "width": 2560,
+              "height": 1300,
+              "caption": "Concept of project management with icons on wooden cubes"
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://renci.org/operations/ood/#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://renci.org/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Office of the Director"
+                }
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://renci.org/#website",
+              "url": "https://renci.org/",
+              "name": "RENCI",
+              "description": "Renaissance Computing Institute at UNC",
+              "publisher": {
+                "@id": "https://renci.org/#organization"
+              },
+              "potentialAction": [
+                {
+                  "@type": "SearchAction",
+                  "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://renci.org/?s={search_term_string}"
+                  },
+                  "query-input": {
+                    "@type": "PropertyValueSpecification",
+                    "valueRequired": true,
+                    "valueName": "search_term_string"
+                  }
+                }
+              ],
+              "inLanguage": "en-US"
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://renci.org/#organization",
+              "name": "RENCI",
+              "url": "https://renci.org/",
+              "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://renci.org/#/schema/logo/image/",
+                "url": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "width": 467,
+                "height": 229,
+                "caption": "RENCI"
+              },
+              "image": {
+                "@id": "https://renci.org/#/schema/logo/image/"
+              },
+              "sameAs": [
+                "https://www.facebook.com/renci.org/",
+                "https://x.com/renci"
+              ]
+            }
+          ]
         }
+      },
+      "mfb_rest_fields": [
+        "title",
+        "yoast_head",
+        "yoast_head_json"
       ],
-      "version-history": [
-        {
-          "count": 3,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6586/revisions"
-        }
+      "_links": {
+        "self": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6603",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
+          }
+        ],
+        "author": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/users/120470"
+          }
+        ],
+        "version-history": [
+          {
+            "count": 4,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6603/revisions"
+          }
+        ],
+        "predecessor-version": [
+          {
+            "id": 6674,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6603/revisions/6674"
+          }
+        ],
+        "wp:featuredmedia": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/media/6503"
+          }
+        ],
+        "wp:attachment": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/media?parent=6603"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 6601,
+      "date": "2025-09-18T13:22:09",
+      "date_gmt": "2025-09-18T17:22:09",
+      "guid": {
+        "rendered": "https://renci.org/?post_type=operations-group&#038;p=6601"
+      },
+      "modified": "2025-10-29T10:53:10",
+      "modified_gmt": "2025-10-29T14:53:10",
+      "slug": "management-team",
+      "status": "publish",
+      "type": "operations-group",
+      "link": "https://renci.org/operations/management-team/",
+      "title": {
+        "rendered": "Management Team"
+      },
+      "excerpt": {
+        "rendered": "<p>The RENCI Management Team is comprised of staff who oversee other staff. The team comes together to discuss key strategies and ensure that RENCI operates effectively. They work to translate RENCI’s mission and vision into actionable plans; provide guidance and support to staff; foster collaboration across units; and monitor progress to keep initiatives on track.</p>\n",
+        "protected": false
+      },
+      "author": 120470,
+      "featured_media": 6494,
+      "template": "",
+      "meta": {
+        "_acf_changed": false,
+        "_relevanssi_hide_post": "",
+        "_relevanssi_hide_content": "",
+        "_relevanssi_pin_for_all": "",
+        "_relevanssi_pin_keywords": "",
+        "_relevanssi_unpin_keywords": "",
+        "_relevanssi_related_keywords": "",
+        "_relevanssi_related_include_ids": "",
+        "_relevanssi_related_exclude_ids": "",
+        "_relevanssi_related_no_append": "",
+        "_relevanssi_related_not_related": "",
+        "_relevanssi_related_posts": "",
+        "_relevanssi_noindex_reason": "",
+        "_EventAllDay": false,
+        "_EventTimezone": "",
+        "_EventStartDate": "",
+        "_EventEndDate": "",
+        "_EventStartDateUTC": "",
+        "_EventEndDateUTC": "",
+        "_EventShowMap": false,
+        "_EventShowMapLink": false,
+        "_EventURL": "",
+        "_EventCost": "",
+        "_EventCostDescription": "",
+        "_EventCurrencySymbol": "",
+        "_EventCurrencyCode": "",
+        "_EventCurrencyPosition": "",
+        "_EventDateTimeSeparator": "",
+        "_EventTimeRangeSeparator": "",
+        "_EventOrganizerID": [],
+        "_EventVenueID": [],
+        "_OrganizerEmail": "",
+        "_OrganizerPhone": "",
+        "_OrganizerWebsite": "",
+        "_VenueAddress": "",
+        "_VenueCity": "",
+        "_VenueCountry": "",
+        "_VenueProvince": "",
+        "_VenueState": "",
+        "_VenueZip": "",
+        "_VenuePhone": "",
+        "_VenueURL": "",
+        "_VenueStateProvince": "",
+        "_VenueLat": "",
+        "_VenueLng": "",
+        "_VenueShowMap": false,
+        "_VenueShowMapLink": false,
+        "_tribe_blocks_recurrence_rules": "",
+        "_tribe_blocks_recurrence_description": "",
+        "_tribe_blocks_recurrence_exclusions": ""
+      },
+      "class_list": [
+        "post-6601",
+        "operations-group",
+        "type-operations-group",
+        "status-publish",
+        "has-post-thumbnail",
+        "hentry"
       ],
-      "predecessor-version": [
-        {
-          "id": 6634,
-          "href": "https://renci.org/wp-json/wp/v2/operations-group/6586/revisions/6634"
+      "acf": [],
+      "mb": [],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Management Team - RENCI</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://renci.org/operations/management-team/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Management Team - RENCI\" />\n<meta property=\"og:description\" content=\"The RENCI Management Team is comprised of staff who oversee other staff. The team comes together to discuss key strategies and ensure that RENCI operates effectively. They work to translate RENCI’s mission and vision into actionable plans; provide guidance and support to staff; foster collaboration across units; and monitor progress to keep initiatives on track.\" />\n<meta property=\"og:url\" content=\"https://renci.org/operations/management-team/\" />\n<meta property=\"og:site_name\" content=\"RENCI\" />\n<meta property=\"article:publisher\" content=\"https://www.facebook.com/renci.org/\" />\n<meta property=\"article:modified_time\" content=\"2025-10-29T14:53:10+00:00\" />\n<meta property=\"og:image\" content=\"https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_381681511-scaled.jpeg\" />\n\t<meta property=\"og:image:width\" content=\"2560\" />\n\t<meta property=\"og:image:height\" content=\"1707\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:site\" content=\"@renci\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://renci.org/operations/management-team/\",\"url\":\"https://renci.org/operations/management-team/\",\"name\":\"Management Team - RENCI\",\"isPartOf\":{\"@id\":\"https://renci.org/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://renci.org/operations/management-team/#primaryimage\"},\"image\":{\"@id\":\"https://renci.org/operations/management-team/#primaryimage\"},\"thumbnailUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_381681511-scaled.jpeg\",\"datePublished\":\"2025-09-18T17:22:09+00:00\",\"dateModified\":\"2025-10-29T14:53:10+00:00\",\"breadcrumb\":{\"@id\":\"https://renci.org/operations/management-team/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://renci.org/operations/management-team/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/operations/management-team/#primaryimage\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_381681511-scaled.jpeg\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_381681511-scaled.jpeg\",\"width\":2560,\"height\":1707,\"caption\":\"Business team collaboration discussing working analyzing with financial data and marketing growth report graph in team, presentation and brainstorming to strategy planning making profit of company.\"},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://renci.org/operations/management-team/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://renci.org/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Management Team\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://renci.org/#website\",\"url\":\"https://renci.org/\",\"name\":\"RENCI\",\"description\":\"Renaissance Computing Institute at UNC\",\"publisher\":{\"@id\":\"https://renci.org/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://renci.org/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://renci.org/#organization\",\"name\":\"RENCI\",\"url\":\"https://renci.org/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/#/schema/logo/image/\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"width\":467,\"height\":229,\"caption\":\"RENCI\"},\"image\":{\"@id\":\"https://renci.org/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/renci.org/\",\"https://x.com/renci\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "yoast_head_json": {
+        "title": "Management Team - RENCI",
+        "robots": {
+          "index": "index",
+          "follow": "follow",
+          "max-snippet": "max-snippet:-1",
+          "max-image-preview": "max-image-preview:large",
+          "max-video-preview": "max-video-preview:-1"
+        },
+        "canonical": "https://renci.org/operations/management-team/",
+        "og_locale": "en_US",
+        "og_type": "article",
+        "og_title": "Management Team - RENCI",
+        "og_description": "The RENCI Management Team is comprised of staff who oversee other staff. The team comes together to discuss key strategies and ensure that RENCI operates effectively. They work to translate RENCI’s mission and vision into actionable plans; provide guidance and support to staff; foster collaboration across units; and monitor progress to keep initiatives on track.",
+        "og_url": "https://renci.org/operations/management-team/",
+        "og_site_name": "RENCI",
+        "article_publisher": "https://www.facebook.com/renci.org/",
+        "article_modified_time": "2025-10-29T14:53:10+00:00",
+        "og_image": [
+          {
+            "width": 2560,
+            "height": 1707,
+            "url": "https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_381681511-scaled.jpeg",
+            "type": "image/jpeg"
+          }
+        ],
+        "twitter_card": "summary_large_image",
+        "twitter_site": "@renci",
+        "schema": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://renci.org/operations/management-team/",
+              "url": "https://renci.org/operations/management-team/",
+              "name": "Management Team - RENCI",
+              "isPartOf": {
+                "@id": "https://renci.org/#website"
+              },
+              "primaryImageOfPage": {
+                "@id": "https://renci.org/operations/management-team/#primaryimage"
+              },
+              "image": {
+                "@id": "https://renci.org/operations/management-team/#primaryimage"
+              },
+              "thumbnailUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_381681511-scaled.jpeg",
+              "datePublished": "2025-09-18T17:22:09+00:00",
+              "dateModified": "2025-10-29T14:53:10+00:00",
+              "breadcrumb": {
+                "@id": "https://renci.org/operations/management-team/#breadcrumb"
+              },
+              "inLanguage": "en-US",
+              "potentialAction": [
+                {
+                  "@type": "ReadAction",
+                  "target": [
+                    "https://renci.org/operations/management-team/"
+                  ]
+                }
+              ]
+            },
+            {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://renci.org/operations/management-team/#primaryimage",
+              "url": "https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_381681511-scaled.jpeg",
+              "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/08/AdobeStock_381681511-scaled.jpeg",
+              "width": 2560,
+              "height": 1707,
+              "caption": "Business team collaboration discussing working analyzing with financial data and marketing growth report graph in team, presentation and brainstorming to strategy planning making profit of company."
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://renci.org/operations/management-team/#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://renci.org/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Management Team"
+                }
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://renci.org/#website",
+              "url": "https://renci.org/",
+              "name": "RENCI",
+              "description": "Renaissance Computing Institute at UNC",
+              "publisher": {
+                "@id": "https://renci.org/#organization"
+              },
+              "potentialAction": [
+                {
+                  "@type": "SearchAction",
+                  "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://renci.org/?s={search_term_string}"
+                  },
+                  "query-input": {
+                    "@type": "PropertyValueSpecification",
+                    "valueRequired": true,
+                    "valueName": "search_term_string"
+                  }
+                }
+              ],
+              "inLanguage": "en-US"
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://renci.org/#organization",
+              "name": "RENCI",
+              "url": "https://renci.org/",
+              "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://renci.org/#/schema/logo/image/",
+                "url": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "width": 467,
+                "height": 229,
+                "caption": "RENCI"
+              },
+              "image": {
+                "@id": "https://renci.org/#/schema/logo/image/"
+              },
+              "sameAs": [
+                "https://www.facebook.com/renci.org/",
+                "https://x.com/renci"
+              ]
+            }
+          ]
         }
+      },
+      "mfb_rest_fields": [
+        "title",
+        "yoast_head",
+        "yoast_head_json"
       ],
-      "wp:featuredmedia": [
-        {
-          "embeddable": true,
-          "href": "https://renci.org/wp-json/wp/v2/media/1917"
-        }
+      "_links": {
+        "self": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6601",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
+          }
+        ],
+        "author": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/users/120470"
+          }
+        ],
+        "version-history": [
+          {
+            "count": 5,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6601/revisions"
+          }
+        ],
+        "predecessor-version": [
+          {
+            "id": 7848,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6601/revisions/7848"
+          }
+        ],
+        "wp:featuredmedia": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/media/6494"
+          }
+        ],
+        "wp:attachment": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/media?parent=6601"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 6594,
+      "date": "2025-09-18T13:05:50",
+      "date_gmt": "2025-09-18T17:05:50",
+      "guid": {
+        "rendered": "https://renci.org/?post_type=operations-group&#038;p=6594"
+      },
+      "modified": "2025-10-29T10:53:20",
+      "modified_gmt": "2025-10-29T14:53:20",
+      "slug": "comms-and-outreach",
+      "status": "publish",
+      "type": "operations-group",
+      "link": "https://renci.org/operations/comms-and-outreach/",
+      "title": {
+        "rendered": "Communications and Outreach"
+      },
+      "excerpt": {
+        "rendered": "<p>The Communications and Outreach Group focuses on four core areas that serve both the institute as a whole and the unique identities of many funded, stand-alone projects:<br />\n1) Communications and branding – developing and executing strategies for communications, marketing, and brand identity.<br />\n2) Web development and design – creating and, when needed, maintaining general websites and scientific web applications with an emphasis on intuitive user interfaces and engaging user experiences.<br />\n3) User engagement – designing and implementing strategies to connect scientific communities with products developed by RENCI and its partners.<br />\n4) Public engagement with data science – fostering opportunities for broad communities to understand and interact with data science research and its societal impacts. </p>\n",
+        "protected": false
+      },
+      "author": 120470,
+      "featured_media": 6507,
+      "template": "",
+      "meta": {
+        "_acf_changed": false,
+        "_relevanssi_hide_post": "",
+        "_relevanssi_hide_content": "",
+        "_relevanssi_pin_for_all": "",
+        "_relevanssi_pin_keywords": "",
+        "_relevanssi_unpin_keywords": "",
+        "_relevanssi_related_keywords": "",
+        "_relevanssi_related_include_ids": "",
+        "_relevanssi_related_exclude_ids": "",
+        "_relevanssi_related_no_append": "",
+        "_relevanssi_related_not_related": "",
+        "_relevanssi_related_posts": "",
+        "_relevanssi_noindex_reason": "",
+        "_EventAllDay": false,
+        "_EventTimezone": "",
+        "_EventStartDate": "",
+        "_EventEndDate": "",
+        "_EventStartDateUTC": "",
+        "_EventEndDateUTC": "",
+        "_EventShowMap": false,
+        "_EventShowMapLink": false,
+        "_EventURL": "",
+        "_EventCost": "",
+        "_EventCostDescription": "",
+        "_EventCurrencySymbol": "",
+        "_EventCurrencyCode": "",
+        "_EventCurrencyPosition": "",
+        "_EventDateTimeSeparator": "",
+        "_EventTimeRangeSeparator": "",
+        "_EventOrganizerID": [],
+        "_EventVenueID": [],
+        "_OrganizerEmail": "",
+        "_OrganizerPhone": "",
+        "_OrganizerWebsite": "",
+        "_VenueAddress": "",
+        "_VenueCity": "",
+        "_VenueCountry": "",
+        "_VenueProvince": "",
+        "_VenueState": "",
+        "_VenueZip": "",
+        "_VenuePhone": "",
+        "_VenueURL": "",
+        "_VenueStateProvince": "",
+        "_VenueLat": "",
+        "_VenueLng": "",
+        "_VenueShowMap": false,
+        "_VenueShowMapLink": false,
+        "_tribe_blocks_recurrence_rules": "",
+        "_tribe_blocks_recurrence_description": "",
+        "_tribe_blocks_recurrence_exclusions": ""
+      },
+      "class_list": [
+        "post-6594",
+        "operations-group",
+        "type-operations-group",
+        "status-publish",
+        "has-post-thumbnail",
+        "hentry"
       ],
-      "wp:attachment": [
-        {
-          "href": "https://renci.org/wp-json/wp/v2/media?parent=6586"
+      "acf": [],
+      "mb": [],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Communications and Outreach - RENCI</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://renci.org/operations/comms-and-outreach/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Communications and Outreach - RENCI\" />\n<meta property=\"og:description\" content=\"The Communications and Outreach Group focuses on four core areas that serve both the institute as a whole and the unique identities of many funded, stand-alone projects: 1) Communications and branding – developing and executing strategies for communications, marketing, and brand identity. 2) Web development and design – creating and, when needed, maintaining general websites and scientific web applications with an emphasis on intuitive user interfaces and engaging user experiences. 3) User engagement – designing and implementing strategies to connect scientific communities with products developed by RENCI and its partners. 4) Public engagement with data science – fostering opportunities for broad communities to understand and interact with data science research and its societal impacts.\" />\n<meta property=\"og:url\" content=\"https://renci.org/operations/comms-and-outreach/\" />\n<meta property=\"og:site_name\" content=\"RENCI\" />\n<meta property=\"article:publisher\" content=\"https://www.facebook.com/renci.org/\" />\n<meta property=\"article:modified_time\" content=\"2025-10-29T14:53:20+00:00\" />\n<meta property=\"og:image\" content=\"https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_921863275-scaled.jpeg\" />\n\t<meta property=\"og:image:width\" content=\"2560\" />\n\t<meta property=\"og:image:height\" content=\"1435\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:site\" content=\"@renci\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://renci.org/operations/comms-and-outreach/\",\"url\":\"https://renci.org/operations/comms-and-outreach/\",\"name\":\"Communications and Outreach - RENCI\",\"isPartOf\":{\"@id\":\"https://renci.org/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://renci.org/operations/comms-and-outreach/#primaryimage\"},\"image\":{\"@id\":\"https://renci.org/operations/comms-and-outreach/#primaryimage\"},\"thumbnailUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_921863275-scaled.jpeg\",\"datePublished\":\"2025-09-18T17:05:50+00:00\",\"dateModified\":\"2025-10-29T14:53:20+00:00\",\"breadcrumb\":{\"@id\":\"https://renci.org/operations/comms-and-outreach/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://renci.org/operations/comms-and-outreach/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/operations/comms-and-outreach/#primaryimage\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_921863275-scaled.jpeg\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_921863275-scaled.jpeg\",\"width\":2560,\"height\":1435},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://renci.org/operations/comms-and-outreach/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://renci.org/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Communications and Outreach\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://renci.org/#website\",\"url\":\"https://renci.org/\",\"name\":\"RENCI\",\"description\":\"Renaissance Computing Institute at UNC\",\"publisher\":{\"@id\":\"https://renci.org/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://renci.org/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://renci.org/#organization\",\"name\":\"RENCI\",\"url\":\"https://renci.org/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/#/schema/logo/image/\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"width\":467,\"height\":229,\"caption\":\"RENCI\"},\"image\":{\"@id\":\"https://renci.org/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/renci.org/\",\"https://x.com/renci\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "yoast_head_json": {
+        "title": "Communications and Outreach - RENCI",
+        "robots": {
+          "index": "index",
+          "follow": "follow",
+          "max-snippet": "max-snippet:-1",
+          "max-image-preview": "max-image-preview:large",
+          "max-video-preview": "max-video-preview:-1"
+        },
+        "canonical": "https://renci.org/operations/comms-and-outreach/",
+        "og_locale": "en_US",
+        "og_type": "article",
+        "og_title": "Communications and Outreach - RENCI",
+        "og_description": "The Communications and Outreach Group focuses on four core areas that serve both the institute as a whole and the unique identities of many funded, stand-alone projects: 1) Communications and branding – developing and executing strategies for communications, marketing, and brand identity. 2) Web development and design – creating and, when needed, maintaining general websites and scientific web applications with an emphasis on intuitive user interfaces and engaging user experiences. 3) User engagement – designing and implementing strategies to connect scientific communities with products developed by RENCI and its partners. 4) Public engagement with data science – fostering opportunities for broad communities to understand and interact with data science research and its societal impacts.",
+        "og_url": "https://renci.org/operations/comms-and-outreach/",
+        "og_site_name": "RENCI",
+        "article_publisher": "https://www.facebook.com/renci.org/",
+        "article_modified_time": "2025-10-29T14:53:20+00:00",
+        "og_image": [
+          {
+            "width": 2560,
+            "height": 1435,
+            "url": "https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_921863275-scaled.jpeg",
+            "type": "image/jpeg"
+          }
+        ],
+        "twitter_card": "summary_large_image",
+        "twitter_site": "@renci",
+        "schema": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://renci.org/operations/comms-and-outreach/",
+              "url": "https://renci.org/operations/comms-and-outreach/",
+              "name": "Communications and Outreach - RENCI",
+              "isPartOf": {
+                "@id": "https://renci.org/#website"
+              },
+              "primaryImageOfPage": {
+                "@id": "https://renci.org/operations/comms-and-outreach/#primaryimage"
+              },
+              "image": {
+                "@id": "https://renci.org/operations/comms-and-outreach/#primaryimage"
+              },
+              "thumbnailUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_921863275-scaled.jpeg",
+              "datePublished": "2025-09-18T17:05:50+00:00",
+              "dateModified": "2025-10-29T14:53:20+00:00",
+              "breadcrumb": {
+                "@id": "https://renci.org/operations/comms-and-outreach/#breadcrumb"
+              },
+              "inLanguage": "en-US",
+              "potentialAction": [
+                {
+                  "@type": "ReadAction",
+                  "target": [
+                    "https://renci.org/operations/comms-and-outreach/"
+                  ]
+                }
+              ]
+            },
+            {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://renci.org/operations/comms-and-outreach/#primaryimage",
+              "url": "https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_921863275-scaled.jpeg",
+              "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/06/AdobeStock_921863275-scaled.jpeg",
+              "width": 2560,
+              "height": 1435
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://renci.org/operations/comms-and-outreach/#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://renci.org/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Communications and Outreach"
+                }
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://renci.org/#website",
+              "url": "https://renci.org/",
+              "name": "RENCI",
+              "description": "Renaissance Computing Institute at UNC",
+              "publisher": {
+                "@id": "https://renci.org/#organization"
+              },
+              "potentialAction": [
+                {
+                  "@type": "SearchAction",
+                  "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://renci.org/?s={search_term_string}"
+                  },
+                  "query-input": {
+                    "@type": "PropertyValueSpecification",
+                    "valueRequired": true,
+                    "valueName": "search_term_string"
+                  }
+                }
+              ],
+              "inLanguage": "en-US"
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://renci.org/#organization",
+              "name": "RENCI",
+              "url": "https://renci.org/",
+              "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://renci.org/#/schema/logo/image/",
+                "url": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "width": 467,
+                "height": 229,
+                "caption": "RENCI"
+              },
+              "image": {
+                "@id": "https://renci.org/#/schema/logo/image/"
+              },
+              "sameAs": [
+                "https://www.facebook.com/renci.org/",
+                "https://x.com/renci"
+              ]
+            }
+          ]
         }
+      },
+      "mfb_rest_fields": [
+        "title",
+        "yoast_head",
+        "yoast_head_json"
       ],
-      "curies": [
-        {
-          "name": "wp",
-          "href": "https://api.w.org/{rel}",
-          "templated": true
+      "_links": {
+        "self": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6594",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
+          }
+        ],
+        "author": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/users/120470"
+          }
+        ],
+        "version-history": [
+          {
+            "count": 9,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6594/revisions"
+          }
+        ],
+        "predecessor-version": [
+          {
+            "id": 6673,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6594/revisions/6673"
+          }
+        ],
+        "wp:featuredmedia": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/media/6507"
+          }
+        ],
+        "wp:attachment": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/media?parent=6594"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
+    },
+    {
+      "id": 6586,
+      "date": "2025-09-18T12:51:06",
+      "date_gmt": "2025-09-18T16:51:06",
+      "guid": {
+        "rendered": "https://renci.org/?post_type=operations-group&#038;p=6586"
+      },
+      "modified": "2025-10-29T10:53:59",
+      "modified_gmt": "2025-10-29T14:53:59",
+      "slug": "acis",
+      "status": "publish",
+      "type": "operations-group",
+      "link": "https://renci.org/operations/acis/",
+      "title": {
+        "rendered": "Advanced Cyberinfrastructure Support"
+      },
+      "excerpt": {
+        "rendered": "<p>The Advanced Cyberinfrastructure Support (ACIS) Team provides a wide range of IT services and support across all groups at RENCI, and is responsible for managing infrastructure in the cloud and on premise in the RENCI datacenter. The team oversees services ranging from high performance computing, enterprise storage, and virtualization to desktop and audio/video conference room support.</p>\n",
+        "protected": false
+      },
+      "author": 120470,
+      "featured_media": 1917,
+      "template": "",
+      "meta": {
+        "_acf_changed": false,
+        "_relevanssi_hide_post": "",
+        "_relevanssi_hide_content": "",
+        "_relevanssi_pin_for_all": "",
+        "_relevanssi_pin_keywords": "",
+        "_relevanssi_unpin_keywords": "",
+        "_relevanssi_related_keywords": "",
+        "_relevanssi_related_include_ids": "",
+        "_relevanssi_related_exclude_ids": "",
+        "_relevanssi_related_no_append": "",
+        "_relevanssi_related_not_related": "",
+        "_relevanssi_related_posts": "",
+        "_relevanssi_noindex_reason": "",
+        "_EventAllDay": false,
+        "_EventTimezone": "",
+        "_EventStartDate": "",
+        "_EventEndDate": "",
+        "_EventStartDateUTC": "",
+        "_EventEndDateUTC": "",
+        "_EventShowMap": false,
+        "_EventShowMapLink": false,
+        "_EventURL": "",
+        "_EventCost": "",
+        "_EventCostDescription": "",
+        "_EventCurrencySymbol": "",
+        "_EventCurrencyCode": "",
+        "_EventCurrencyPosition": "",
+        "_EventDateTimeSeparator": "",
+        "_EventTimeRangeSeparator": "",
+        "_EventOrganizerID": [],
+        "_EventVenueID": [],
+        "_OrganizerEmail": "",
+        "_OrganizerPhone": "",
+        "_OrganizerWebsite": "",
+        "_VenueAddress": "",
+        "_VenueCity": "",
+        "_VenueCountry": "",
+        "_VenueProvince": "",
+        "_VenueState": "",
+        "_VenueZip": "",
+        "_VenuePhone": "",
+        "_VenueURL": "",
+        "_VenueStateProvince": "",
+        "_VenueLat": "",
+        "_VenueLng": "",
+        "_VenueShowMap": false,
+        "_VenueShowMapLink": false,
+        "_tribe_blocks_recurrence_rules": "",
+        "_tribe_blocks_recurrence_description": "",
+        "_tribe_blocks_recurrence_exclusions": ""
+      },
+      "class_list": [
+        "post-6586",
+        "operations-group",
+        "type-operations-group",
+        "status-publish",
+        "has-post-thumbnail",
+        "hentry"
+      ],
+      "acf": [],
+      "mb": [],
+      "yoast_head": "<!-- This site is optimized with the Yoast SEO plugin v26.3 - https://yoast.com/wordpress/plugins/seo/ -->\n<title>Advanced Cyberinfrastructure Support - RENCI</title>\n<meta name=\"robots\" content=\"index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1\" />\n<link rel=\"canonical\" href=\"https://renci.org/operations/acis/\" />\n<meta property=\"og:locale\" content=\"en_US\" />\n<meta property=\"og:type\" content=\"article\" />\n<meta property=\"og:title\" content=\"Advanced Cyberinfrastructure Support - RENCI\" />\n<meta property=\"og:description\" content=\"The Advanced Cyberinfrastructure Support (ACIS) Team provides a wide range of IT services and support across all groups at RENCI, and is responsible for managing infrastructure in the cloud and on premise in the RENCI datacenter. The team oversees services ranging from high performance computing, enterprise storage, and virtualization to desktop and audio/video conference room support.\" />\n<meta property=\"og:url\" content=\"https://renci.org/operations/acis/\" />\n<meta property=\"og:site_name\" content=\"RENCI\" />\n<meta property=\"article:publisher\" content=\"https://www.facebook.com/renci.org/\" />\n<meta property=\"article:modified_time\" content=\"2025-10-29T14:53:59+00:00\" />\n<meta property=\"og:image\" content=\"https://renci.org/wp-content/uploads/sites/1447/2025/06/acis_featuredimg.jpeg\" />\n\t<meta property=\"og:image:width\" content=\"1600\" />\n\t<meta property=\"og:image:height\" content=\"768\" />\n\t<meta property=\"og:image:type\" content=\"image/jpeg\" />\n<meta name=\"twitter:card\" content=\"summary_large_image\" />\n<meta name=\"twitter:site\" content=\"@renci\" />\n<script type=\"application/ld+json\" class=\"yoast-schema-graph\">{\"@context\":\"https://schema.org\",\"@graph\":[{\"@type\":\"WebPage\",\"@id\":\"https://renci.org/operations/acis/\",\"url\":\"https://renci.org/operations/acis/\",\"name\":\"Advanced Cyberinfrastructure Support - RENCI\",\"isPartOf\":{\"@id\":\"https://renci.org/#website\"},\"primaryImageOfPage\":{\"@id\":\"https://renci.org/operations/acis/#primaryimage\"},\"image\":{\"@id\":\"https://renci.org/operations/acis/#primaryimage\"},\"thumbnailUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/acis_featuredimg.jpeg\",\"datePublished\":\"2025-09-18T16:51:06+00:00\",\"dateModified\":\"2025-10-29T14:53:59+00:00\",\"breadcrumb\":{\"@id\":\"https://renci.org/operations/acis/#breadcrumb\"},\"inLanguage\":\"en-US\",\"potentialAction\":[{\"@type\":\"ReadAction\",\"target\":[\"https://renci.org/operations/acis/\"]}]},{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/operations/acis/#primaryimage\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/acis_featuredimg.jpeg\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/06/acis_featuredimg.jpeg\",\"width\":1600,\"height\":768},{\"@type\":\"BreadcrumbList\",\"@id\":\"https://renci.org/operations/acis/#breadcrumb\",\"itemListElement\":[{\"@type\":\"ListItem\",\"position\":1,\"name\":\"Home\",\"item\":\"https://renci.org/\"},{\"@type\":\"ListItem\",\"position\":2,\"name\":\"Advanced Cyberinfrastructure Support\"}]},{\"@type\":\"WebSite\",\"@id\":\"https://renci.org/#website\",\"url\":\"https://renci.org/\",\"name\":\"RENCI\",\"description\":\"Renaissance Computing Institute at UNC\",\"publisher\":{\"@id\":\"https://renci.org/#organization\"},\"potentialAction\":[{\"@type\":\"SearchAction\",\"target\":{\"@type\":\"EntryPoint\",\"urlTemplate\":\"https://renci.org/?s={search_term_string}\"},\"query-input\":{\"@type\":\"PropertyValueSpecification\",\"valueRequired\":true,\"valueName\":\"search_term_string\"}}],\"inLanguage\":\"en-US\"},{\"@type\":\"Organization\",\"@id\":\"https://renci.org/#organization\",\"name\":\"RENCI\",\"url\":\"https://renci.org/\",\"logo\":{\"@type\":\"ImageObject\",\"inLanguage\":\"en-US\",\"@id\":\"https://renci.org/#/schema/logo/image/\",\"url\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"contentUrl\":\"https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png\",\"width\":467,\"height\":229,\"caption\":\"RENCI\"},\"image\":{\"@id\":\"https://renci.org/#/schema/logo/image/\"},\"sameAs\":[\"https://www.facebook.com/renci.org/\",\"https://x.com/renci\"]}]}</script>\n<!-- / Yoast SEO plugin. -->",
+      "yoast_head_json": {
+        "title": "Advanced Cyberinfrastructure Support - RENCI",
+        "robots": {
+          "index": "index",
+          "follow": "follow",
+          "max-snippet": "max-snippet:-1",
+          "max-image-preview": "max-image-preview:large",
+          "max-video-preview": "max-video-preview:-1"
+        },
+        "canonical": "https://renci.org/operations/acis/",
+        "og_locale": "en_US",
+        "og_type": "article",
+        "og_title": "Advanced Cyberinfrastructure Support - RENCI",
+        "og_description": "The Advanced Cyberinfrastructure Support (ACIS) Team provides a wide range of IT services and support across all groups at RENCI, and is responsible for managing infrastructure in the cloud and on premise in the RENCI datacenter. The team oversees services ranging from high performance computing, enterprise storage, and virtualization to desktop and audio/video conference room support.",
+        "og_url": "https://renci.org/operations/acis/",
+        "og_site_name": "RENCI",
+        "article_publisher": "https://www.facebook.com/renci.org/",
+        "article_modified_time": "2025-10-29T14:53:59+00:00",
+        "og_image": [
+          {
+            "width": 1600,
+            "height": 768,
+            "url": "https://renci.org/wp-content/uploads/sites/1447/2025/06/acis_featuredimg.jpeg",
+            "type": "image/jpeg"
+          }
+        ],
+        "twitter_card": "summary_large_image",
+        "twitter_site": "@renci",
+        "schema": {
+          "@context": "https://schema.org",
+          "@graph": [
+            {
+              "@type": "WebPage",
+              "@id": "https://renci.org/operations/acis/",
+              "url": "https://renci.org/operations/acis/",
+              "name": "Advanced Cyberinfrastructure Support - RENCI",
+              "isPartOf": {
+                "@id": "https://renci.org/#website"
+              },
+              "primaryImageOfPage": {
+                "@id": "https://renci.org/operations/acis/#primaryimage"
+              },
+              "image": {
+                "@id": "https://renci.org/operations/acis/#primaryimage"
+              },
+              "thumbnailUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/06/acis_featuredimg.jpeg",
+              "datePublished": "2025-09-18T16:51:06+00:00",
+              "dateModified": "2025-10-29T14:53:59+00:00",
+              "breadcrumb": {
+                "@id": "https://renci.org/operations/acis/#breadcrumb"
+              },
+              "inLanguage": "en-US",
+              "potentialAction": [
+                {
+                  "@type": "ReadAction",
+                  "target": [
+                    "https://renci.org/operations/acis/"
+                  ]
+                }
+              ]
+            },
+            {
+              "@type": "ImageObject",
+              "inLanguage": "en-US",
+              "@id": "https://renci.org/operations/acis/#primaryimage",
+              "url": "https://renci.org/wp-content/uploads/sites/1447/2025/06/acis_featuredimg.jpeg",
+              "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/06/acis_featuredimg.jpeg",
+              "width": 1600,
+              "height": 768
+            },
+            {
+              "@type": "BreadcrumbList",
+              "@id": "https://renci.org/operations/acis/#breadcrumb",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  "position": 1,
+                  "name": "Home",
+                  "item": "https://renci.org/"
+                },
+                {
+                  "@type": "ListItem",
+                  "position": 2,
+                  "name": "Advanced Cyberinfrastructure Support"
+                }
+              ]
+            },
+            {
+              "@type": "WebSite",
+              "@id": "https://renci.org/#website",
+              "url": "https://renci.org/",
+              "name": "RENCI",
+              "description": "Renaissance Computing Institute at UNC",
+              "publisher": {
+                "@id": "https://renci.org/#organization"
+              },
+              "potentialAction": [
+                {
+                  "@type": "SearchAction",
+                  "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://renci.org/?s={search_term_string}"
+                  },
+                  "query-input": {
+                    "@type": "PropertyValueSpecification",
+                    "valueRequired": true,
+                    "valueName": "search_term_string"
+                  }
+                }
+              ],
+              "inLanguage": "en-US"
+            },
+            {
+              "@type": "Organization",
+              "@id": "https://renci.org/#organization",
+              "name": "RENCI",
+              "url": "https://renci.org/",
+              "logo": {
+                "@type": "ImageObject",
+                "inLanguage": "en-US",
+                "@id": "https://renci.org/#/schema/logo/image/",
+                "url": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "contentUrl": "https://renci.org/wp-content/uploads/sites/1447/2025/09/renci-logo-simple.png",
+                "width": 467,
+                "height": 229,
+                "caption": "RENCI"
+              },
+              "image": {
+                "@id": "https://renci.org/#/schema/logo/image/"
+              },
+              "sameAs": [
+                "https://www.facebook.com/renci.org/",
+                "https://x.com/renci"
+              ]
+            }
+          ]
         }
-      ]
+      },
+      "mfb_rest_fields": [
+        "title",
+        "yoast_head",
+        "yoast_head_json"
+      ],
+      "_links": {
+        "self": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6586",
+            "targetHints": {
+              "allow": [
+                "GET"
+              ]
+            }
+          }
+        ],
+        "collection": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/operations-group"
+          }
+        ],
+        "about": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/types/operations-group"
+          }
+        ],
+        "author": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/users/120470"
+          }
+        ],
+        "version-history": [
+          {
+            "count": 3,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6586/revisions"
+          }
+        ],
+        "predecessor-version": [
+          {
+            "id": 6634,
+            "href": "https://renci.org/wp-json/wp/v2/operations-group/6586/revisions/6634"
+          }
+        ],
+        "wp:featuredmedia": [
+          {
+            "embeddable": true,
+            "href": "https://renci.org/wp-json/wp/v2/media/1917"
+          }
+        ],
+        "wp:attachment": [
+          {
+            "href": "https://renci.org/wp-json/wp/v2/media?parent=6586"
+          }
+        ],
+        "curies": [
+          {
+            "name": "wp",
+            "href": "https://api.w.org/{rel}",
+            "templated": true
+          }
+        ]
+      }
     }
-  }
-]
+  ]
+}
