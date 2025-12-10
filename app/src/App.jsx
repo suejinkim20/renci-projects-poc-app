@@ -1,21 +1,20 @@
-import Router from "./router"
+import Router from "./router";
+import NavBar from "./components/elements/NavBar";
 
 function App() {
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <header className="bg-white shadow p-2 mb-6">
-        {/* nav links */}
-        <div style={{margin: "1rem"}}>
-          <h2>RENCI Projects Matrix</h2>
-        </div>
-
-      </header>
+    <div className="min-h-screen bg-gray-50 p-6" 
+      style={{
+        width: "100vw",
+        height: "100vh",
+      }}>
+      <NavBar />
 
       <main>
         <Router />
       </main>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
