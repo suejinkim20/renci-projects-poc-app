@@ -9,12 +9,62 @@ import {
 export default function ProjectTable({ rows = [] }) {
   if (!rows.length) return <p>No projects available.</p>;
 
+  // SVG arrow component
+  const Arrow = ({ isDesc }) => (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="12"
+      height="12"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      style={{
+        transform: isDesc ? "rotate(180deg)" : "none",
+        transition: "transform 0.2s",
+      }}
+    >
+      <polyline points="6 9 12 15 18 9" />
+    </svg>
+  );
+
   const columns = useMemo(
     () => [
       {
-        header: "Project",
         accessorKey: "title",
+        // default sorted column header
+        header: ({ column }) => {
+          const sorted = column.getIsSorted(); // "asc" | "desc" | false
+          const isDesc = sorted === "desc";
+
+          return (
+            <span
+              style={{
+                cursor: "pointer",
+                display: "inline-flex",
+                alignItems: "center",
+                gap: "4px",
+              }}
+              onClick={() => {
+                // if currently asc → switch to desc
+                if (sorted === "asc") {
+                  column.toggleSorting(true);
+                } else {
+                  // force asc (no unsort state)
+                  column.toggleSorting(false);
+                }
+              }}
+            >
+              Project
+              <Arrow isDesc={isDesc} />
+            </span>
+          );
+        },
       },
+
+      // ───────────────────────────── Funders ─────────────────────────────
       {
         header: "Funders",
         accessorKey: "fundersWithCount",
@@ -43,6 +93,8 @@ export default function ProjectTable({ rows = [] }) {
           );
         },
       },
+
+      // ───────────────────────────── Partners ─────────────────────────────
       {
         header: "Partners",
         accessorKey: "partnersWithCount",
@@ -71,6 +123,8 @@ export default function ProjectTable({ rows = [] }) {
           );
         },
       },
+
+      // ───────────────────────────── Staff ─────────────────────────────
       {
         header: "Staff",
         accessorKey: "staffDetails",
@@ -93,12 +147,18 @@ export default function ProjectTable({ rows = [] }) {
     []
   );
 
+  // Default sort by project title ASC
   const table = useReactTable({
     data: rows,
     columns,
+    initialState: {
+      sorting: [{ id: "title", desc: false }],
+    },
     getCoreRowModel: getCoreRowModel(),
+    getSortedRowModel: getSortedRowModel(),
   });
 
+  // Styles
   const tableStyle = {
     width: "100%",
     borderCollapse: "collapse",
@@ -122,9 +182,9 @@ export default function ProjectTable({ rows = [] }) {
     <div style={{ overflowX: "auto" }}>
       <table style={tableStyle}>
         <thead>
-          {table.getHeaderGroups().map((headerGroup) => (
-            <tr key={headerGroup.id}>
-              {headerGroup.headers.map((header) => (
+          {table.getHeaderGroups().map((hg) => (
+            <tr key={hg.id}>
+              {hg.headers.map((header) => (
                 <th key={header.id} style={thStyle}>
                   {flexRender(header.column.columnDef.header, header.getContext())}
                 </th>
@@ -132,6 +192,7 @@ export default function ProjectTable({ rows = [] }) {
             </tr>
           ))}
         </thead>
+
         <tbody>
           {table.getRowModel().rows.map((row) => (
             <tr key={row.id}>
