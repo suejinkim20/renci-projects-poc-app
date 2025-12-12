@@ -12,11 +12,11 @@ import {
 
 // Build the data graph once
 export const graph = buildDataGraph({
-  rawProjects,
-  rawStaff,
-  rawOrgs,
-  rawResearchGroups: rawResearch,
-  rawOperationsGroups: rawOps,
+  rawProjects: rawProjects.items,
+  rawStaff: rawStaff.items,
+  rawOrgs: rawOrgs.items,
+  rawResearchGroups: rawResearch.items,
+  rawOperationsGroups: rawOps.items,
 });
 
 // Convenience exports
