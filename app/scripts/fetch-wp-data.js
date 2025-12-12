@@ -1,3 +1,5 @@
+// Script to fetch data from WordPress REST API and store as local JSON files
+
 import fs from "fs/promises";
 import path from "path";
 import dotenv from "dotenv";
@@ -49,6 +51,26 @@ async function fetchAllPages(endpoint) {
 }
 
 // --------------------------------------
+// Write file only if content changed
+// --------------------------------------
+async function writeIfChanged(filePath, data) {
+  const newContent = JSON.stringify(data, null, 2);
+  try {
+    const existingContent = await fs.readFile(filePath, "utf8");
+    if (existingContent === newContent) {
+      console.log(`   ⚡ No changes → ${filePath}`);
+      return false; // No update needed
+    }
+  } catch (err) {
+    // File doesn't exist, proceed to write
+  }
+
+  await fs.writeFile(filePath, newContent, "utf8");
+  console.log(`   ✔ Updated → ${filePath}`);
+  return true;
+}
+
+// --------------------------------------
 // MAIN
 // --------------------------------------
 async function run() {
@@ -75,25 +97,20 @@ async function run() {
         items
       };
 
-      await fs.writeFile(outPath, JSON.stringify(payload, null, 2), "utf8");
-      console.log(`   ✔ ${items.length} saved → ${outPath}`);
+      await writeIfChanged(outPath, payload);
+
     } catch (err) {
       console.error(`   ✖ Error for ${apiSlug}:`, err.message);
     }
   }
 
-  // Write global timestamp file
+  // Write global timestamp file only if changed
   const lastUpdatedPath = path.resolve("src/data/_last-updated.json");
-  await fs.writeFile(
-    lastUpdatedPath,
-    JSON.stringify({ updated: globalUpdated }, null, 2),
-    "utf8"
-  );
+  await writeIfChanged(lastUpdatedPath, { updated: globalUpdated });
 
   console.log("\n📦 SUMMARY");
-  console.log(`   Content types processed: ${totalTypes}`);
+  console.log(`   Content types processed: ${totalTypes} of ${Object.keys(CONTENT_TYPES).length}`);
   console.log(`   Total records collected: ${totalRecords}`);
-  console.log(`   Global timestamp saved → ${lastUpdatedPath}`);
   console.log("\n✨ All done!");
 }
 
