@@ -148,25 +148,27 @@ Use `make help` to see a list of available targets.
 ```
 $ make help
 
-Help Commands
-• help                  📖 Show help
+• check                ✅ Check all required env vars
 
-General Commands
-• lint                  🤔 Run linter
-• format                ℹ︎ Run formatter
-• ruff                  🔀 Run linter and formatter
-• test                  🧪 Run tests
+Help Commands
+• help                 📖 Show help
 
 Docker Commands
-• build                 🛠️ Build Docker image
-• run                   ▶️ Run Docker container
-• stop                  🛑 Stop the running container
-• push                  📤 Push the Docker image
-• publish               📤 Build and push the Docker image
+• pull                 📥 Pull the Docker image
+• build                🛠️  Build the Docker image
+• run                  ▶️  Run the Docker container
+• stop                 🛑 Stop the running container
+• rebuild              🔄 Stop, build, and run fresh
+• push                 📤 Push the Docker image
+• publish              🚀 Build and push in one go
 
 Helm Commands
-• pod-up                🚀 Install or upgrade Helm release
-• pod-down              💣 Uninstall Helm release
+• helm-up              🚀 Deploy or upgrade the Helm chart
+• helm-down            🗑️ Uninstall the Helm chart
+• helm-lint            🔎 Lint the Helm chart
+• helm-template        📄 Template the Helm chart
+• helm-status          📊 Check the status of the Helm release
+• helm-test            🧪 Run Helm tests
 ```
 
 ### Docker
