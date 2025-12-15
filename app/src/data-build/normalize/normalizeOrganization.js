@@ -7,7 +7,7 @@ export function normalizeOrganization(raw) {
 
   const website = acf.organization_website?.value || acf.organization_website?.value_formatted || "";
   const shortName = acf.organization_short_name?.value || "";
-  const longName = acf.organization_long_name?.value || raw.title?.rendered || "";
+  const longName = raw.title?.rendered || "";
 
   return {
     id: raw.id,
