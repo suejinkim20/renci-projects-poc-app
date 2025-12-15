@@ -139,3 +139,38 @@ npm run lint:fix
    Provides UI state + query integration (exports: `researchGroups`, `selectedResearchGroupId`, `setSelectedResearchGroupId`, `rows`).
 * `src/components/views/DashboardView.jsx`  
    Renders dropdown, summary, and tables.
+
+## Production
+
+A Makefile exists to make building for production and deployment simpler.
+Use `make help` to see a list of available targets.
+
+```
+$ make help
+
+Help Commands
+• help                  📖 Show help
+
+General Commands
+• lint                  🤔 Run linter
+• format                ℹ︎ Run formatter
+• ruff                  🔀 Run linter and formatter
+• test                  🧪 Run tests
+
+Docker Commands
+• build                 🛠️ Build Docker image
+• run                   ▶️ Run Docker container
+• stop                  🛑 Stop the running container
+• push                  📤 Push the Docker image
+• publish               📤 Build and push the Docker image
+
+Helm Commands
+• pod-up                🚀 Install or upgrade Helm release
+• pod-down              💣 Uninstall Helm release
+```
+
+### Docker
+
+Build a Docker image with `make build`. This results in an NGINX Docker image that simply deploys the aforementioned application bundle on its port 80.
+
+The `make run` command runs that image. Note that, to align with production deployment, this command generates SSL certificates locally. This should serve the application on the machine's port 80.
