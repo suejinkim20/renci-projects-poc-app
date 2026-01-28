@@ -1,13 +1,18 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import { StrictMode } from "react"
+import { createRoot } from "react-dom/client"
 import { BrowserRouter } from "react-router-dom"
-import './index.css'
-import App from './App.jsx'
+import { ApolloProvider } from "@apollo/client/react"
 
-createRoot(document.getElementById('root')).render(
+import "./index.css"
+import App from "./App.jsx"
+import { client } from "./lib/graphql/client"
+
+createRoot(document.getElementById("root")).render(
   <StrictMode>
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>
-  </StrictMode>,
+    <ApolloProvider client={client}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ApolloProvider>
+  </StrictMode>
 )
