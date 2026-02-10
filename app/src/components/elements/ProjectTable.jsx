@@ -46,6 +46,10 @@ export default function ProjectTable({ rows = [] }) {
                 display: "inline-flex",
                 alignItems: "center",
                 gap: "4px",
+                maxWidth: "100px",
+                whiteSpace: "nowrap",
+                overflow: "hidden",
+                textOverflow: "ellipsis",
               }}
               onClick={() => {
                 // if currently asc → switch to desc
@@ -60,6 +64,16 @@ export default function ProjectTable({ rows = [] }) {
               Project
               <Arrow isDesc={isDesc} />
             </span>
+          );
+        },
+      },
+      // ───────────────────────────── Active ─────────────────────────────
+      {
+        header: "Active",
+        accessorKey: "active",
+        cell: ({ row }) => {
+          return (
+            row.original.active == 1 ? "Active" : "Inactive"
           );
         },
       },

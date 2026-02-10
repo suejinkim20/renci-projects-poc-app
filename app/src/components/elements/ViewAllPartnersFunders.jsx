@@ -1,66 +1,62 @@
-import React, { useState, useMemo } from "react";
+import React, { useMemo, useState } from "react";
 import {
   useReactTable,
   getCoreRowModel,
   getSortedRowModel,
   getFilteredRowModel,
 } from "@tanstack/react-table";
-import { TableHeaderInput } from "./table/TableHeaderInput"
-import { TableHeaderSelect } from "./table/TableHeaderSelect"
-import { FundersPartnersTable } from "./table/FundersPartnersTable"
+
+import { TableHeaderInput } from "./table/TableHeaderInput";
+import { TableHeaderSelect } from "./table/TableHeaderSelect";
+import { FundersPartnersTable } from "./table/FundersPartnersTable";
 
 export default function ViewAllPartnersFunders({ rows = [] }) {
-  if (!rows.length) return <p>No projects found.</p>;
-
-  const [type, setType] = useState("funders");
   const [columnFilters, setColumnFilters] = useState([]);
 
-  const { funders, partners, allResearchGroups } = useMemo(() => {
-    const funderMap = {};
-    const partnerMap = {};
-    const researchGroupSet = new Set();
+  if (!rows.length) {
+    return <p>No organizations found.</p>;
+  }
 
-    rows.forEach((project) => {
-      const projRef = {
-        id: project.id,
-        title: project.title,
-        staffDetails: project.staffDetails || [],
-        operationsGroup: project.operationsGroup || null,
-      };
+  /**
+   * Collect unique research groups once for the filter dropdown
+   */
+  const allResearchGroups = useMemo(() => {
+    const set = new Set();
 
-      (project.fundersWithCount || []).forEach((f) => {
-        if (!funderMap[f.name]) funderMap[f.name] = { name: f.name, url: f.url, projects: [] };
-        funderMap[f.name].projects.push(projRef);
-      });
-
-      (project.partnersWithCount || []).forEach((p) => {
-        if (!partnerMap[p.name]) partnerMap[p.name] = { name: p.name, url: p.url, projects: [] };
-        partnerMap[p.name].projects.push(projRef);
-      });
-
-      (project.staffDetails || []).forEach((s) => {
-        if (s.researchGroupName) researchGroupSet.add(s.researchGroupName);
+    rows.forEach((org) => {
+      org.projects.forEach((p) => {
+        p.staffDetails?.forEach((s) => {
+          if (s.researchGroupName) {
+            s.researchGroupName
+              .split(",")
+              .map((g) => g.trim())
+              .forEach((g) => set.add(g));
+          }
+        });
       });
     });
 
-    return {
-      funders: Object.values(funderMap),
-      partners: Object.values(partnerMap),
-      allResearchGroups: Array.from(researchGroupSet).sort(),
-    };
+    return Array.from(set).sort();
   }, [rows]);
 
-  const data = type === "funders" ? funders : partners;
-
+  /**
+   * Table column definitions
+   */
   const columns = useMemo(
     () => [
       {
         accessorKey: "name",
-        header: (props) => <TableHeaderInput column={props.column} label="Organization" placeholder="Filter..." />,
+        header: (props) => (
+          <TableHeaderInput
+            column={props.column}
+            label="Organization"
+            placeholder="Filter…"
+          />
+        ),
         cell: ({ row }) =>
-          row.original.url ? (
+          row.original.slug ? (
             <a
-              href={row.original.url}
+              href={`https://renci.org/organization/${row.original.slug}`}
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#2563eb", textDecoration: "none" }}
@@ -70,90 +66,115 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
           ) : (
             row.original.name
           ),
-        minSize: 150,
-        maxSize: 300,
-        enableResizing: true,
-
+        minSize: 180,
       },
+
       {
-        accessorKey: "projects",
-        sortingFn: (a, b) => a.original.projects.length - b.original.projects.length,
-        header: (props) => <TableHeaderInput column={props.column} label="Project Count" type="number" placeholder="Min..." />,
-        enableColumnFilter: true,
-        filterFn: (row, columnId, filterValue) => {
-          if (!filterValue) return true;
-          return row.original.projects.length >= filterValue;
+        accessorKey: "relationship",
+        header: (props) => (
+          <TableHeaderSelect
+            column={props.column}
+            label="Relationship"
+            options={["Funder", "Partner", "Both", "Neither"]}
+          />
+        ),
+        filterFn: (row, columnId, filterValues) => {
+          if (!filterValues?.length) return true;
+          return filterValues.includes(row.getValue(columnId));
         },
-        cell: ({ row }) => row.original.projects.length,
-        minSize: 50,
-        maxSize: 60,
-        enableResizing: true,
-
+        minSize: 120,
       },
+
+      {
+        id: "projectCount",
+        accessorFn: (row) => row.projects.length,
+        header: (props) => (
+          <TableHeaderInput
+            column={props.column}
+            label="Project Count"
+            type="number"
+            placeholder="Min…"
+          />
+        ),
+        filterFn: (row, columnId, value) =>
+          !value || row.getValue(columnId) >= value,
+        cell: ({ getValue }) => getValue(),
+        minSize: 80,
+      },
+
       {
         header: "Projects",
         cell: ({ row }) =>
-          row.original.projects.length === 0 ? (
-            "—"
-          ) : (
+          row.original.projects.length ? (
             <ul style={{ margin: 0, paddingLeft: 16 }}>
               {row.original.projects.map((p) => (
                 <li key={p.id}>{p.title}</li>
               ))}
             </ul>
+          ) : (
+            "—"
           ),
-        minSize: 300,
-        maxSize: 400,
-        enableResizing: true,
+        minSize: 320,
       },
+
       {
         id: "researchGroups",
-        accessorFn: (row) =>
-          row.projects.flatMap((p) => (p.staffDetails || []).map((s) => s.researchGroupName).filter(Boolean)),
+        accessorFn: (row) => {
+          const groups = [];
+
+          row.projects.forEach((p) => {
+            p.staffDetails?.forEach((s) => {
+              if (s.researchGroupName) {
+                s.researchGroupName
+                  .split(",")
+                  .map((g) => g.trim())
+                  .forEach((g) => groups.push(g));
+              }
+            });
+          });
+
+          return [...new Set(groups)];
+        },
         header: (props) => (
-          <TableHeaderSelect column={props.column} label="Research Groups" options={allResearchGroups} multiple />
+          <TableHeaderSelect
+            column={props.column}
+            label="Research Groups"
+            options={allResearchGroups}
+            multiple
+          />
         ),
-        enableColumnFilter: true,
         filterFn: (row, columnId, filterValues) => {
-          if (!filterValues || !filterValues.length) return true;
-          const groups = row.getValue(columnId);
+          if (!filterValues?.length) return true;
+          const groups = row.getValue(columnId) || [];
           return groups.some((g) => filterValues.includes(g));
         },
-        cell: ({ row }) => {
-          const groups = row.original.projects.flatMap((p) => (p.staffDetails || []).map((s) => s.researchGroupName).filter(Boolean));
-          const unique = [...new Set(groups)];
-          if (!unique.length) return "—";
+        cell: ({ getValue }) => {
+          const groups = getValue();
+          if (!groups?.length) return "—";
           return (
             <ul style={{ margin: 0, paddingLeft: 16 }}>
-              {unique.map((g) => (
+              {groups.map((g) => (
                 <li key={g}>{g}</li>
               ))}
             </ul>
           );
         },
         minSize: 300,
-        maxSize: 400,
-        enableResizing: true,
-
       },
-      // {
-      //   accessorKey: "operationsGroup",
-      //   header: (props) => <TableHeaderInput column={props.column} label="Operations Group" placeholder="Filter..." />,
-      //   cell: ({ row }) => row.original.operationsGroup || "—",
-      // },
     ],
-    [type, allResearchGroups]
+    [allResearchGroups]
   );
 
+  /**
+   * Table instance
+   */
   const table = useReactTable({
-    data,
+    data: rows,
     columns,
     state: { columnFilters },
     onColumnFiltersChange: setColumnFilters,
     initialState: {
       sorting: [{ id: "name", desc: false }],
-      columnFilters: [],
-      columnSizing: {},
     },
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
@@ -162,36 +183,13 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
 
   return (
     <div>
-      {/* Toggle + Reset Filters */}
-      <div style={{ margin: "1rem 0.5rem", display: "flex", justifyContent: "space-between" }}>
-        <div style={{ display: "flex", gap: "8px" }}>
-          <button
-            onClick={() => setType("funders")}
-            style={{
-              padding: "6px 12px",
-              background: type === "funders" ? "#2563eb" : "#e5e7eb",
-              color: type === "funders" ? "#fff" : "#000",
-              borderRadius: "6px",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            Funders
-          </button>
-          <button
-            onClick={() => setType("partners")}
-            style={{
-              padding: "6px 12px",
-              background: type === "partners" ? "#2563eb" : "#e5e7eb",
-              color: type === "partners" ? "#fff" : "#000",
-              borderRadius: "6px",
-              border: "none",
-              cursor: "pointer",
-            }}
-          >
-            Partners
-          </button>
-        </div>
+      <div
+        style={{
+          margin: "1rem 0.5rem",
+          display: "flex",
+          justifyContent: "flex-end",
+        }}
+      >
         <button
           onClick={() => setColumnFilters([])}
           style={{

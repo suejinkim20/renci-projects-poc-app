@@ -1,13 +1,16 @@
-import ViewAllPartnersFunders from "../elements/ViewAllPartnersFunders.jsx";
-import { getRowsForResearchGroup } from "../../data/index.js";
+import { useQuery } from "@apollo/client/react";
+import ViewAllPartnersFunders from "../elements/ViewAllPartnersFunders";
+
+import { ORGANIZATIONS_QUERY } from "../../lib/graphql/queries";
+import { buildOrganizationRows } from "../../data/adapters/projectRowsFromOrganizations";
 
 export default function PartnersFundersView() {
-  // All active projects
-  const rows = getRowsForResearchGroup(null);
-// console.log(rows)
-  return (
-    <div className="space-y-4">
-      <ViewAllPartnersFunders rows={rows} />
-    </div>
-  );
+  const { data, loading, error } = useQuery(ORGANIZATIONS_QUERY);
+
+  if (loading) return <p>Loading organizations…</p>;
+  if (error) return <p>Error loading data</p>;
+
+  const rows = buildOrganizationRows(data.organizations);
+
+  return <ViewAllPartnersFunders rows={rows} />;
 }
