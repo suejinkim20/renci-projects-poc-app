@@ -30,9 +30,9 @@ export const FundersPartnersTable = ({ table }) => {
     <table style={tableStyle}>
       <thead>
         {table.getHeaderGroups().map((hg) => (
-          <tr key={hg.id}>
+          <tr key={`headerGroup-${hg.id}`}>
             {hg.headers.map((header) => (
-              <th key={header.id} style={thStyle}>
+              <th key={`header-${header.id}`} style={thStyle}>
                 {flexRender(header.column.columnDef.header, header.getContext())}
               </th>
             ))}
@@ -41,9 +41,9 @@ export const FundersPartnersTable = ({ table }) => {
       </thead>
       <tbody>
         {table.getRowModel().rows.map((row) => (
-          <tr key={row.id}>
+          <tr key={`row-${row.id}`}>
             {row.getVisibleCells().map((cell) => (
-              <td key={cell.id} style={thTdStyle}>
+              <td key={`cell-${cell.id}`} style={thTdStyle}>
                 {flexRender(cell.column.columnDef.cell, cell.getContext())}
               </td>
             ))}

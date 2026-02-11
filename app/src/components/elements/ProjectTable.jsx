@@ -88,7 +88,7 @@ export default function ProjectTable({ rows = [] }) {
           return (
             <ul style={{ margin: 0, paddingLeft: "16px" }}>
               {funders.map((f) => (
-                <li key={f.name}>
+                <li key={`funder-${f.id}`}>
                   {f.url ? (
                     <a
                       href={f.url}
@@ -118,7 +118,7 @@ export default function ProjectTable({ rows = [] }) {
           return (
             <ul style={{ margin: 0, paddingLeft: "16px" }}>
               {partners.map((p) => (
-                <li key={p.name}>
+                <li key={`partner-${p.id}`}>
                   {p.url ? (
                     <a
                       href={p.url}
@@ -148,7 +148,7 @@ export default function ProjectTable({ rows = [] }) {
           return (
             <ul style={{ margin: 0, paddingLeft: "16px" }}>
               {staff.map((s) => (
-                <li key={s.name}>
+                <li key={`staff-${s.id}`}>
                   {s.name}
                   {s.affiliation ? ` (${s.affiliation})` : ""}
                 </li>
@@ -209,9 +209,9 @@ export default function ProjectTable({ rows = [] }) {
 
         <tbody>
           {table.getRowModel().rows.map((row) => (
-            <tr key={row.id}>
+            <tr key={`row-${row.id}`}>
               {row.getVisibleCells().map((cell) => (
-                <td key={cell.id} style={thTdStyle}>
+                <td key={`cell-${cell.id}`} style={thTdStyle}>
                   {flexRender(cell.column.columnDef.cell, cell.getContext())}
                 </td>
               ))}

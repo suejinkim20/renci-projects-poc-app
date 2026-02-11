@@ -15,10 +15,10 @@ export default function DataTable({ columns, data }) {
     <table className="min-w-full border-collapse border border-gray-200">
       <thead>
         {table.getHeaderGroups().map(headerGroup => (
-          <tr key={headerGroup.id}>
+          <tr key={`headerGroup-${headerGroup.id}`}>
             {headerGroup.headers.map(header => (
               <th
-                key={header.id}
+                key={`header-${header.id}`}
                 className="border border-gray-300 px-3 py-2 text-left bg-gray-100"
               >
                 {flexRender(header.column.columnDef.header, header.getContext())}
@@ -29,9 +29,9 @@ export default function DataTable({ columns, data }) {
       </thead>
       <tbody>
         {table.getRowModel().rows.map(row => (
-          <tr key={row.id}>
+          <tr key={`row-${row.id}`}>
             {row.getVisibleCells().map(cell => (
-              <td key={cell.id} className="border border-gray-300 px-3 py-2">
+              <td key={`cell-${cell.id}`} className="border border-gray-300 px-3 py-2">
                 {flexRender(cell.column.columnDef.cell, cell.getContext())}
               </td>
             ))}

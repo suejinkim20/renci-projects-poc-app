@@ -108,7 +108,7 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
           row.original.projects.length ? (
             <ul style={{ margin: 0, paddingLeft: 16 }}>
               {row.original.projects.map((p) => (
-                <li key={p.id}>{p.title}</li>
+                <li key={`project-${p.id}`}>{p.title}</li>
               ))}
             </ul>
           ) : (
@@ -154,7 +154,7 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
           return (
             <ul style={{ margin: 0, paddingLeft: 16 }}>
               {groups.map((g) => (
-                <li key={g}>{g}</li>
+                <li key={`research-group-${g}`}>{g}</li>
               ))}
             </ul>
           );

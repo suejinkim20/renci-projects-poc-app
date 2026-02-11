@@ -42,7 +42,7 @@ export const TableHeaderSelect = ({ column, label, options = [], multiple = fals
       >
         {!multiple && <option value="">All</option>}
         {options.map((o) => (
-          <option key={o} value={o}>
+          <option key={`option-${o}`} value={o}>
             {o}
           </option>
         ))}
