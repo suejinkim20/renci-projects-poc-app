@@ -88,10 +88,10 @@ export default function ProjectTable({ rows = [] }) {
           return (
             <ul style={{ margin: 0, paddingLeft: "16px" }}>
               {funders.map((f) => (
-                <li key={`funder-${f.id}`}>
-                  {f.url ? (
+                <li key={`${row.original.slug}-funder-${f.id}`}>
+                  {f.slug ? (
                     <a
-                      href={f.url}
+                      href={`https://renci.org/organization/${f.slug}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: "#2563eb", textDecoration: "none" }}
@@ -99,7 +99,7 @@ export default function ProjectTable({ rows = [] }) {
                       {f.name}
                     </a>
                   ) : (
-                    f.name
+                    f.name 
                   )}
                 </li>
               ))}
@@ -118,10 +118,10 @@ export default function ProjectTable({ rows = [] }) {
           return (
             <ul style={{ margin: 0, paddingLeft: "16px" }}>
               {partners.map((p) => (
-                <li key={`partner-${p.id}`}>
-                  {p.url ? (
+                <li key={`${row.original.slug}-partner-${p.id}`}>
+                  {p.slug ? (
                     <a
-                      href={p.url}
+                      href={`https://renci.org/organization/${p.slug}`}
                       target="_blank"
                       rel="noopener noreferrer"
                       style={{ color: "#2563eb", textDecoration: "none" }}
@@ -148,8 +148,19 @@ export default function ProjectTable({ rows = [] }) {
           return (
             <ul style={{ margin: 0, paddingLeft: "16px" }}>
               {staff.map((s) => (
-                <li key={`staff-${s.id}`}>
-                  {s.name}
+                <li key={`${row.original.slug}-staff-${s.id}`}>
+                  {s.slug ? (
+                    <a
+                      href={`https://renci.org/person/${s.slug}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ color: "#2563eb", textDecoration: "none" }}
+                    >
+                      {s.name}
+                    </a>
+                  ) : (
+                    s.name
+                  )}
                   {s.affiliation ? ` (${s.affiliation})` : ""}
                 </li>
               ))}

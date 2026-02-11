@@ -1,6 +1,6 @@
+import { useState } from "react";
 import { useQuery } from "@apollo/client/react";
 import ViewAllPartnersFunders from "../elements/ViewAllPartnersFunders";
-
 import { ORGANIZATIONS_QUERY } from "../../lib/graphql/queries";
 import { buildOrganizationRows } from "../../data/adapters/projectRowsFromOrganizations";
 

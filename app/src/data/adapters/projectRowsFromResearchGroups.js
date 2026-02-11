@@ -8,17 +8,25 @@ export function buildProjectRowsFromResearchGroup(researchGroup) {
 
     staffDetails: project.contributors?.map((c) => ({
       name: c.name,
-      url: c.slug,
+      slug: c.slug,
+      id: c.post_id,
+      affiliation: c.research_groups?.find((g) => g.post_id === researchGroup.post_id)
+        ? `internal` 
+        : c.research_groups?.map((g) => g.name).join(", ") || c.operations_groups?.map((g) => g.name).join(", ") || "",
     })) ?? [],
 
     fundersWithCount: project.funding_organizations?.map((o) => ({
       name: o.name,
       count: 1,
+      id: o.post_id,
+      slug: o.slug,
     })) ?? [],
 
     partnersWithCount: project.partner_organizations?.map((o) => ({
       name: o.name,
       count: 1,
+      id: o.post_id,
+      slug: o.slug,
     })) ?? [],
   }));
 }

@@ -4,6 +4,7 @@ import {
   getCoreRowModel,
   getSortedRowModel,
   getFilteredRowModel,
+  getPaginationRowModel
 } from "@tanstack/react-table";
 
 import { TableHeaderInput } from "./table/TableHeaderInput";
@@ -179,6 +180,7 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
     getCoreRowModel: getCoreRowModel(),
     getSortedRowModel: getSortedRowModel(),
     getFilteredRowModel: getFilteredRowModel(),
+    getPaginationRowModel: getPaginationRowModel(),
   });
 
   return (
@@ -202,6 +204,54 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
           }}
         >
           Reset Filters
+        </button>
+      </div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          gap: "6px",
+          margin: "1rem 0",
+          flexWrap: "wrap",
+        }}
+      >
+        <button
+          onClick={() => table.previousPage()}
+          disabled={!table.getCanPreviousPage()}
+        >
+          ←
+        </button>
+
+        {getVisiblePages(pageIndex, pageCount).map((p, i) =>
+          p === "..." ? (
+            <span key={i} style={{ padding: "0 6px" }}>
+              ...
+            </span>
+          ) : (
+            <button
+              key={p}
+              onClick={() => setPageIndex(p)}
+              style={{
+                padding: "6px 10px",
+                borderRadius: "6px",
+                border: "1px solid #ddd",
+                background: p === pageIndex ? "#2563eb" : "#fff",
+                color: p === pageIndex ? "#fff" : "#000",
+                fontWeight: p === pageIndex ? "600" : "normal",
+                cursor: "pointer",
+              }}
+            >
+              {p + 1}
+            </button>
+          )
+        )}
+
+        <button
+          onClick={() => table.nextPage()}
+          disabled={!table.getCanNextPage()}
+        >
+          →
         </button>
       </div>
 
