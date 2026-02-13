@@ -1,41 +1,43 @@
-import React from "react";
-import { Arrow } from "../icons/arrow";
+import { Stack, Text, TextInput, Group, UnstyledButton } from "@mantine/core";
+import { IconChevronUp, IconChevronDown } from "@tabler/icons-react";
 
-export const TableHeaderInput = ({ column, label, type = "text", placeholder }) => {
-  const isSortedDesc = column.getIsSorted() === "desc";
+export const TableHeaderInput = ({
+  column,
+  label,
+  type = "text",
+  placeholder,
+}) => {
+  const sortState = column.getIsSorted();
 
   return (
-    <div style={{ display: "flex", flexDirection: "column" }}>
-      <div
-        style={{
-          fontWeight: 600,
-          lineHeight: "1.2rem",
-          cursor: "pointer",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-        onClick={column.getToggleSortingHandler()}
-      >
-        {label}
-        <Arrow isDesc={isSortedDesc} />
-      </div>
-      <input
+    <Stack gap={4}>
+      <UnstyledButton onClick={column.getToggleSortingHandler()}>
+        <Group justify="space-between" align="center" gap="xs">
+          <Text size="sm" fw={600}>
+            {label}
+          </Text>
+
+          {sortState === "asc" && <IconChevronUp size={14} />}
+          {sortState === "desc" && <IconChevronDown size={14} />}
+        </Group>
+      </UnstyledButton>
+
+      <TextInput
+        size="xs"
         type={type}
         value={column.getFilterValue() ?? ""}
-        onChange={(e) => column.setFilterValue(type === "number" ? Number(e.target.value) : e.target.value)}
+        onChange={(e) =>
+          column.setFilterValue(
+            type === "number"
+              ? e.target.value === ""
+                ? ""
+                : Number(e.target.value)
+              : e.target.value
+          )
+        }
         placeholder={placeholder}
-        style={{
-          width: "100%",
-          marginTop: 2,
-          padding: "2px 4px",
-          borderRadius: 4,
-          border: "1px solid #ccc",
-          fontSize: "0.85rem",
-          boxSizing: "border-box",
-        }}
         onClick={(e) => e.stopPropagation()}
       />
-    </div>
+    </Stack>
   );
 };

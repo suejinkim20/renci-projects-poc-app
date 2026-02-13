@@ -4,8 +4,18 @@ import {
   getCoreRowModel,
   getSortedRowModel,
   getFilteredRowModel,
-  getPaginationRowModel
+  getPaginationRowModel,
 } from "@tanstack/react-table";
+
+import {
+  Button,
+  Group,
+  Stack,
+  Pagination,
+  Text,
+  Paper,
+  Center,
+} from "@mantine/core";
 
 import { TableHeaderInput } from "./table/TableHeaderInput";
 import { TableHeaderSelect } from "./table/TableHeaderSelect";
@@ -15,7 +25,11 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
   const [columnFilters, setColumnFilters] = useState([]);
 
   if (!rows.length) {
-    return <p>No organizations found.</p>;
+    return (
+      <Center mt="xl">
+        <Text>No organizations found.</Text>
+      </Center>
+    );
   }
 
   /**
@@ -41,12 +55,13 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
   }, [rows]);
 
   /**
-   * Table column definitions
+   * Columns (unchanged)
    */
   const columns = useMemo(
     () => [
       {
         accessorKey: "name",
+        size: 500,
         header: (props) => (
           <TableHeaderInput
             column={props.column}
@@ -60,16 +75,13 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
               href={`https://renci.org/organization/${row.original.slug}`}
               target="_blank"
               rel="noopener noreferrer"
-              style={{ color: "#2563eb", textDecoration: "none" }}
             >
               {row.original.name}
             </a>
           ) : (
             row.original.name
           ),
-        minSize: 180,
       },
-
       {
         accessorKey: "relationship",
         header: (props) => (
@@ -83,9 +95,7 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
           if (!filterValues?.length) return true;
           return filterValues.includes(row.getValue(columnId));
         },
-        minSize: 120,
       },
-
       {
         id: "projectCount",
         accessorFn: (row) => row.projects.length,
@@ -100,14 +110,12 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
         filterFn: (row, columnId, value) =>
           !value || row.getValue(columnId) >= value,
         cell: ({ getValue }) => getValue(),
-        minSize: 80,
       },
-
       {
         header: "Projects",
         cell: ({ row }) =>
           row.original.projects.length ? (
-            <ul style={{ margin: 0, paddingLeft: 16 }}>
+            <ul>
               {row.original.projects.map((p) => (
                 <li key={`project-${p.id}`}>{p.title}</li>
               ))}
@@ -115,9 +123,7 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
           ) : (
             "—"
           ),
-        minSize: 320,
       },
-
       {
         id: "researchGroups",
         accessorFn: (row) => {
@@ -153,14 +159,13 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
           const groups = getValue();
           if (!groups?.length) return "—";
           return (
-            <ul style={{ margin: 0, paddingLeft: 16 }}>
+            <ul>
               {groups.map((g) => (
                 <li key={`research-group-${g}`}>{g}</li>
               ))}
             </ul>
           );
         },
-        minSize: 300,
       },
     ],
     [allResearchGroups]
@@ -183,79 +188,35 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
     getPaginationRowModel: getPaginationRowModel(),
   });
 
+  const pageIndex = table.getState().pagination.pageIndex;
+  const pageCount = table.getPageCount();
+
   return (
-    <div>
-      <div
-        style={{
-          margin: "1rem 0.5rem",
-          display: "flex",
-          justifyContent: "flex-end",
-        }}
-      >
-        <button
-          onClick={() => setColumnFilters([])}
-          style={{
-            padding: "6px 12px",
-            background: "#f87171",
-            color: "#fff",
-            borderRadius: "6px",
-            border: "none",
-            cursor: "pointer",
-          }}
-        >
-          Reset Filters
-        </button>
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          gap: "6px",
-          margin: "1rem 0",
-          flexWrap: "wrap",
-        }}
-      >
-        <button
-          onClick={() => table.previousPage()}
-          disabled={!table.getCanPreviousPage()}
-        >
-          ←
-        </button>
+    <Paper shadow="xs" p="md" radius="md">
+      <Stack gap="md">
+        {/* Reset Button */}
+        <Group justify="flex-end">
+          <Button
+            color="red"
+            variant="light"
+            onClick={() => setColumnFilters([])}
+          >
+            Reset Filters
+          </Button>
+        </Group>
 
-        {getVisiblePages(pageIndex, pageCount).map((p, i) =>
-          p === "..." ? (
-            <span key={i} style={{ padding: "0 6px" }}>
-              ...
-            </span>
-          ) : (
-            <button
-              key={p}
-              onClick={() => setPageIndex(p)}
-              style={{
-                padding: "6px 10px",
-                borderRadius: "6px",
-                border: "1px solid #ddd",
-                background: p === pageIndex ? "#2563eb" : "#fff",
-                color: p === pageIndex ? "#fff" : "#000",
-                fontWeight: p === pageIndex ? "600" : "normal",
-                cursor: "pointer",
-              }}
-            >
-              {p + 1}
-            </button>
-          )
-        )}
+        {/* Table */}
+        <FundersPartnersTable table={table} />
 
-        <button
-          onClick={() => table.nextPage()}
-          disabled={!table.getCanNextPage()}
-        >
-          →
-        </button>
-      </div>
-
-      <FundersPartnersTable table={table} />
-    </div>
+        {/* Pagination */}
+        <Group justify="center">
+          <Pagination
+            total={pageCount}
+            value={pageIndex + 1}
+            onChange={(page) => table.setPageIndex(page - 1)}
+          />
+        </Group>
+      </Stack>
+    </Paper>
   );
 }

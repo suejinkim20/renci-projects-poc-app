@@ -1,55 +1,52 @@
-import React from "react";
+import { Table, ScrollArea, Text } from "@mantine/core";
 import { flexRender } from "@tanstack/react-table";
 
-export const FundersPartnersTable = ({ table }) => {
-  const thTdStyle = {
-    border: "1px solid #ddd",
-    padding: "6px 10px",
-    textAlign: "left",
-    verticalAlign: "top",
-    wordWrap: "break-word", // allow wrapping
-    whiteSpace: "normal",   // allow text to wrap
-  };
-
-  const thStyle = {
-    ...thTdStyle,
-    backgroundColor: "#f4f4f4",
-    fontWeight: "bold",
-    cursor: "pointer",
-  };
-
-  const tableStyle = {
-    width: "100%",
-    borderCollapse: "collapse",
-    marginTop: 12,
-    tableLayout: "fixed", // ensures min/max widths are respected
-  };
-
-
+export function FundersPartnersTable({ table }) {
   return (
-    <table style={tableStyle}>
-      <thead>
-        {table.getHeaderGroups().map((hg) => (
-          <tr key={`headerGroup-${hg.id}`}>
-            {hg.headers.map((header) => (
-              <th key={`header-${header.id}`} style={thStyle}>
-                {flexRender(header.column.columnDef.header, header.getContext())}
-              </th>
-            ))}
-          </tr>
-        ))}
-      </thead>
-      <tbody>
-        {table.getRowModel().rows.map((row) => (
-          <tr key={`row-${row.id}`}>
-            {row.getVisibleCells().map((cell) => (
-              <td key={`cell-${cell.id}`} style={thTdStyle}>
-                {flexRender(cell.column.columnDef.cell, cell.getContext())}
-              </td>
-            ))}
-          </tr>
-        ))}
-      </tbody>
-    </table>
+    <ScrollArea>
+      <Table style={{ tableLayout: "fixed", width: "100%" }}>
+        <Table.Thead>
+          {table.getHeaderGroups().map((headerGroup) => (
+            <Table.Tr key={headerGroup.id}>
+              {headerGroup.headers.map((header) => (
+                <Table.Th key={header.id}>
+                  {header.isPlaceholder
+                    ? null
+                    : flexRender(
+                        header.column.columnDef.header,
+                        header.getContext()
+                      )}
+                </Table.Th>
+              ))}
+            </Table.Tr>
+          ))}
+        </Table.Thead>
+
+        <Table.Tbody>
+          {table.getRowModel().rows.length === 0 ? (
+            <Table.Tr>
+              <Table.Td colSpan={table.getAllColumns().length}>
+                <Text c="dimmed" ta="center" py="md">
+                  No results found.
+                </Text>
+              </Table.Td>
+            </Table.Tr>
+          ) : (
+            table.getRowModel().rows.map((row) => (
+              <Table.Tr key={row.id}>
+                {row.getVisibleCells().map((cell) => (
+                  <Table.Td key={cell.id}>
+                    {flexRender(
+                      cell.column.columnDef.cell,
+                      cell.getContext()
+                    )}
+                  </Table.Td>
+                ))}
+              </Table.Tr>
+            ))
+          )}
+        </Table.Tbody>
+      </Table>
+    </ScrollArea>
   );
-};
+}
