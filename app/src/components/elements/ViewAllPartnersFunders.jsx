@@ -112,17 +112,33 @@ export default function ViewAllPartnersFunders({ rows = [] }) {
         cell: ({ getValue }) => getValue(),
       },
       {
-        header: "Projects",
-        cell: ({ row }) =>
-          row.original.projects.length ? (
+        id: "projects",
+        accessorFn: (row) => row.projects.map((p) => p.title),
+        header: (props) => (
+          <TableHeaderInput
+            column={props.column}
+            label="Projects"
+            placeholder="Search projects…"
+          />
+        ),
+        filterFn: (row, columnId, filterValue) => {
+          if (!filterValue) return true;
+          const projectTitles = row.getValue(columnId) || [];
+          return projectTitles.some((title) =>
+            title.toLowerCase().includes(filterValue.toLowerCase())
+          );
+        },
+        cell: ({ getValue }) => {
+          const projects = getValue();
+          if (!projects.length) return "—";
+          return (
             <ul>
-              {row.original.projects.map((p) => (
-                <li key={`project-${p.id}`}>{p.title}</li>
+              {projects.map((title, idx) => (
+                <li key={`project-${idx}`}>{title}</li>
               ))}
             </ul>
-          ) : (
-            "—"
-          ),
+          );
+        },
       },
       {
         id: "researchGroups",

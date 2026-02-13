@@ -62,7 +62,7 @@ export default function NavBar() {
             RENCI Projects Explorer App
           </div>
           <div>|</div>
-          <div>Last updated: {lastUpdated}</div>
+          <div>Last synced: {lastUpdated}</div>
         </div>
 
         <div className="navbar-links">
