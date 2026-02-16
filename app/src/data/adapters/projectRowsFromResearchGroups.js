@@ -11,7 +11,7 @@ export function buildProjectRowsFromResearchGroup(researchGroup) {
       slug: c.slug,
       id: c.post_id,
       affiliation: c.research_groups?.find((g) => g.post_id === researchGroup.post_id)
-        ? `internal` 
+        ? c.research_groups?.map((g) => g.name).join(", ") 
         : c.research_groups?.map((g) => g.name).join(", ") || c.operations_groups?.map((g) => g.name).join(", ") || "",
     })) ?? [],
 

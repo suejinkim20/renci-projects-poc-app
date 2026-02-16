@@ -47,8 +47,19 @@ export default function ProjectsByResearchGroups() {
       },
     },
     {
-      accessorKey: "fundersWithCount",
-      header: (props) => <TableHeaderInput column={props.column} label="Funders" />,
+      id: "funders",
+      accessorFn: (row) =>
+        (row.fundersWithCount ?? []).map((f) => f.name),
+      header: (props) => (
+        <TableHeaderInput column={props.column} label="Funders" />
+      ),
+      filterFn: (row, columnId, filterValue) => {
+        if (!filterValue) return true;
+        const values = row.getValue(columnId) || [];
+        return values.some((v) =>
+          v.toLowerCase().includes(filterValue.toLowerCase())
+        );
+      },
       cell: ({ row }) => {
         const funders = row.original.fundersWithCount || [];
         if (!funders.length) return "—";
@@ -74,8 +85,19 @@ export default function ProjectsByResearchGroups() {
       },
     },
     {
-      accessorKey: "partnersWithCount",
-      header: (props) => <TableHeaderInput column={props.column} label="Partners" />,
+      id: "partners",
+      accessorFn: (row) =>
+        (row.partnersWithCount ?? []).map((p) => p.name),
+      header: (props) => (
+        <TableHeaderInput column={props.column} label="Partners" />
+      ),
+      filterFn: (row, columnId, filterValue) => {
+        if (!filterValue) return true;
+        const values = row.getValue(columnId) || [];
+        return values.some((v) =>
+          v.toLowerCase().includes(filterValue.toLowerCase())
+        );
+      },      
       cell: ({ row }) => {
         const partners = row.original.partnersWithCount || [];
         if (!partners.length) return "—";
@@ -101,8 +123,19 @@ export default function ProjectsByResearchGroups() {
       },
     },
     {
-      accessorKey: "staffDetails",
-      header: (props) => <TableHeaderInput column={props.column} label="Staff" />,
+      id: "staff",
+      accessorFn: (row) =>
+        (row.staffDetails ?? []).map((s) => s.name),
+      header: (props) => (
+        <TableHeaderInput column={props.column} label="Staff" />
+      ),
+      filterFn: (row, columnId, filterValue) => {
+        if (!filterValue) return true;
+        const values = row.getValue(columnId) || [];
+        return values.some((v) =>
+          v.toLowerCase().includes(filterValue.toLowerCase())
+        );
+      },
       cell: ({ row }) => {
         const staff = row.original.staffDetails || [];
         if (!staff.length) return "—";
@@ -121,7 +154,7 @@ export default function ProjectsByResearchGroups() {
                 ) : (
                   s.name
                 )}
-                {s.affiliation ? ` (${s.affiliation})` : ""}
+                {s.affiliation && ` (${s.affiliation})`}
               </li>
             ))}
           </ul>
