@@ -65,14 +65,14 @@ ingress:
     cert-manager.io/cluster-issuer: zerossl
     # nginx.ingress.kubernetes.io/whitelist-source-range: "0.0.0.0/0,::/0"
   hosts:
-    - host: matrix.apps.renci.org
+    - host: explore.apps.renci.org
       paths:
         - path: /
           pathType: Prefix
   tls:
-   - secretName: matrix.apps.renci.org-tls
+   - secretName: explore.apps.renci.org-tls
      hosts:
-       - matrix.apps.renci.org
+       - explore.apps.renci.org
 
 resources: {}
   # We usually recommend not to specify default resources and to leave this as a conscious
